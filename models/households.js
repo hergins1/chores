@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Admins = sequelize.define("Admins", {
+  var Households = sequelize.define("Households", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -8,5 +8,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return Admins;
+  return Households;
 };
