@@ -15,5 +15,20 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+  Users.associate = function(models) {
+    Users.belongsTo(models.Households, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
+  Users.associate = function(models) {
+    Users.hasMany(models.Chores, {
+      onDelete: "cascade"
+    });
+  };
+
   return Users;
 };

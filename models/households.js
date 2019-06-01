@@ -8,5 +8,12 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+  Households.associate = function(models) {
+    Households.hasMany(models.Users, {
+      onDelete: "cascade"
+    });
+  };
+
   return Households;
 };

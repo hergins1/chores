@@ -24,5 +24,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+
+  Chores.associate = function(models) {
+    Chores.belongsTo(models.Users, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Chores;
 };
