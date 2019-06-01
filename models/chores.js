@@ -14,11 +14,11 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    created: {
-      // TIMESTAMP: https://github.com/sequelize/sequelize/issues/9363
-      type: "TIMESTAMP",
-      allowNull: false
-    },
+    // created: {
+    //   // TIMESTAMP: https://github.com/sequelize/sequelize/issues/9363
+    //   type: "TIMESTAMP",
+    //   allowNull: false
+    // },
     due: {
       type: DataTypes.DATE,
       allowNull: false

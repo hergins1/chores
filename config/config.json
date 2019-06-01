@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "exampledb",
+    "database": "chore_app",
     "host": "localhost",
     "dialect": "mysql"
   },
