@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "chore_app",
+    "database": "chores_app",
     "host": "localhost",
     "dialect": "mysql"
   },

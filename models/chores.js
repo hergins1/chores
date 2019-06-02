@@ -19,10 +19,10 @@ module.exports = function(sequelize, DataTypes) {
     //   type: "TIMESTAMP",
     //   allowNull: false
     // },
-    due: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
+    // due: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false
+    // },
     completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: false

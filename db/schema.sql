@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS chore_app;
-CREATE DATABASE chore_app;
+DROP DATABASE IF EXISTS chores_app;
+CREATE DATABASE chores_app;
