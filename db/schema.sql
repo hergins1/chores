@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS chores_app;
+CREATE DATABASE chores_app;
