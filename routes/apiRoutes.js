@@ -2,9 +2,41 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/households/", function(req, res) {
+    db.Households.findAll({}).then(function(dbHouseholds) {
+      res.json(dbHouseholds);
+    });
+  });
+
+  app.get("/api/users", function(req, res) {
+    db.Users.findAll({}).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
+  app.get("/api/chores", function(req, res) {
+    db.Chores.findAll({}).then(function(dbChores) {
+      res.json(dbChores);
+    });
+  });
+
+  app.get("/api/chores/:id", function(req, res) {
+    db.Chores.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbChores) {
+      res.json(dbChores);
+    });
+  });
+
+  app.get("/api/chores/completed/", function(req, res) {
+    db.Chores.findAll({
+      where: {
+        completed: true
+      }
+    }).then(function(dbChores) {
+      res.json(dbChores);
     });
   });
 
