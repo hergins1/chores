@@ -1,0 +1,7 @@
+export client_id="605853368068-i3h8akibplvkbhvuaaesite3m4jsinor.apps.googleusercontent.com"
+export project_id="quickstart-1559672557864"
+export auth_uri="https://accounts.google.com/o/oauth2/auth"
+export token_uri="https://oauth2.googleapis.com/token"
+export auth_provider_x509_cert_url="https://www.googleapis.com/oauth2/v1/certs"
+export client_secret="OGggFcL3zH7X8OkNw-iOXzqN"
+export redirect_uris="urn:ietf:wg:oauth:2.0:oob","http://localhost"
