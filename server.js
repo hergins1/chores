@@ -22,6 +22,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
+require("./routes/photosApiRoutes")(app);
 require("./routes/choresApiRoutes")(app);
 require("./routes/householdsApiRoutes")(app);
 require("./routes/usersApiRoutes")(app);
