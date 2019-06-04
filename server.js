@@ -44,6 +44,21 @@ db.sequelize.sync(syncOptions).then(function() {
       PORT,
       PORT
     );
+    // https://grokonez.com/node-js/nodejs-save-file-image-to-mysql-by-sequelize-with-blob-type
+    // Image.create({
+    //   type: 'png',
+    //   name: 'JSA Banner',
+    //   data: imageData
+    // }).then(image => {
+    //   try{
+    //     fs.writeFileSync(__dirname + '/static/assets/tmp/tmp-jsa-header.png', image.data);
+
+    //     // exit node.js app
+    //     process.exit(0);
+    //   }catch(e){
+    //     console.log(e);
+    //   }
+    // })
   });
 });
 
