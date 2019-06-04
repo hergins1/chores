@@ -31,17 +31,6 @@ module.exports = function(app) {
     });
   });
 
-  // router.put(‘/book/:bookId’, function (req, res, next) {
-  //   Book.update(
-  //     {title: req.body.title},
-  //     {where: req.params.bookId}
-  //   )
-  //   .then(function(rowsUpdated) {
-  //     res.json(rowsUpdated)
-  //   })
-  //   .catch(next)
-  //  })
-
   // DELETE Users
   app.delete("/api/users/:id", function(req, res) {
     db.Users.destroy({ where: { id: req.params.id } }).then(function(dbUsers) {
