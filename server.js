@@ -22,7 +22,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/choresApiRoutes")(app);
+require("./routes/householdsApiRoutes")(app);
+require("./routes/usersApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: true };
