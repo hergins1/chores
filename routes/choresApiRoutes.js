@@ -48,6 +48,16 @@ module.exports = function(app) {
     });
   });
 
+  app.put("/api/chores", function(req, res) {
+    db.Chores.update(req.body.due, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
   // DELETE Chores
   app.delete("/api/chores/:id", function(req, res) {
     db.Chores.destroy({ where: { id: req.params.id } }).then(function(

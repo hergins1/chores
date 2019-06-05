@@ -10,6 +10,7 @@ module.exports = function(app) {
 
   // CREATE new Users
   app.post("/api/users", function(req, res) {
+    console.log(req.body);
     db.Users.create(req.body).then(function(dbUsers) {
       res.json(dbUsers);
     });
