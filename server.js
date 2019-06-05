@@ -1,6 +1,8 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var firebase = require("firebase/app");
+require("firebase/auth");
 
 var db = require("./models");
 

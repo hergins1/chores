@@ -1,4 +1,7 @@
 "use strict";
+var firebase = require("firebase/app");
+require("firebase/auth");
+
 
 var fs = require("fs");
 var path = require("path");
