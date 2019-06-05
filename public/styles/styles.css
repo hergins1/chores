@@ -1,3 +1,32 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background-color: rgb(63, 72, 204);
+}
+
+#navBar {
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+#toggle-icon {
+  color: rgb(63, 72, 204);
+}
+
+footer {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+
+a {
+  color: rgb(63, 72, 204); 
 }
