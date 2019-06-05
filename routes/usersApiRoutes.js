@@ -1,5 +1,8 @@
 var db = require("../models");
 
+const bcrypt = require('bcrypt');
+
+
 module.exports = function(app) {
   // GET all Users
   app.get("/api/users", function(req, res) {
@@ -9,10 +12,24 @@ module.exports = function(app) {
   });
 
   // CREATE new Users
+
   app.post("/api/users", function(req, res) {
-    db.Users.create(req.body).then(function(dbUsers) {
-      res.json(dbUsers);
+    // callback
+    bcrypt.hash(req.body.password, 10, function(err, hash) {
+      if (err) throw err;
+      req.body.password = hash;
+
+      db.Users.create(req.body)
+      .then(function(dbUsers) {
+        res.json(dbUsers);
+      })
+      .catch(function(err) {
+        console.error(err);
+        res.status(500).send(err);
+      });
     });
+
+    
   });
 
   // UPDATE Users name
