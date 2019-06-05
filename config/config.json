@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "password",
+    "database": "chores_app",
     "host": "localhost",
     "dialect": "mysql"
   },
