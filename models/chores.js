@@ -36,5 +36,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
+
+  Chores.associate = function(models) {
+    Chores.hasMany(models.Photos, {
+      onDelete: "cascade"
+    });
+  };
   return Chores;
 };
