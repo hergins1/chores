@@ -1,93 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {{!-- Bootstrap --}}
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  {{!-- Google Fonts --}}
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
-  {{!-- Font Awesome --}}
-  <script src="https://kit.fontawesome.com/d9ccc314b4.js"></script>
-  {{!-- CSS --}}
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  {{!-- Favicon --}}
-  <link rel="icon" type="favicon/png" href="/images/favicon/png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles.styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="favicon/png" href="images/favicon.png">
   <title>Chorz</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light" id="navBar">
-    <a class="navbar brand" href="#" id="busName">
-      <img id="logo" src="./images/logo.png" class="d-block mx-auto" alt="Chorz">
-    </a>
-    <button id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse"
-      data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="nav navbar-nav ml-auto" id="head-links">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Contact
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand" id="navBar">
+      <a class="navbar-item" href="#">
+        <img src="./images/logo.png" alt="Chorz">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
   </nav>
 
+  <hr id="page-content">
+
   {{{body}}}
 
+  <hr id="page-end">
+
   <footer>
-    <ul class="list-unstyled text-center">
-      <li>
-        <a href="#"><i class="fas fa-home"></i></a>
-      </li>
-      <li>
-        <a href="#">Home</a>
-      </li>
-    </ul>
-    <ul class="list-unstyled text-center">
-      <li>
-        <a href="#"><i class="fas fa-list-ul"></i></a>
-      </li>
-      <li>
-        <a href="#">Chores</a>
-      </li>
-    </ul>
-    <ul class="list-unstyled text-center">
-      <li>
-        <a href="#"><i class="fas fa-comments"></i></a>
-      </li>
-      <li>
-        <a href="#">Message</a>
-      </li>
-    </ul>
-    <ul class="list-unstyled text-center">
-      <li>
-        <a href="#"><i class="fas fa-users"></i></a>
-      </li>
-      <li>
-        <a href="#">Family</a>
-      </li>
-    </ul>
+    <div id="footer-icons" class="columns is-mobile has-text-centered">
+      <div class="column is-one-quarter">
+        <ul class="list-unstyled text-center">
+          <li>
+            <a href="#"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column is-one-quarter">
+        <ul class="list-unstyled text-center">
+          <li>
+            <a href="#"><i class="fas fa-list-ul"></i></a>
+          </li>
+          <li>
+            <a href="#">Chores</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column is-one-quarter">
+        <ul class="list-unstyled center">
+          <li>
+            <a href="#"><i class="fas fa-comments"></i></a>
+          </li>
+          <li>
+            <a href="#">Message</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column is-one-quarter">
+        <ul class="list-unstyled text-center">
+          <li>
+            <a href="#"><i class="fas fa-users"></i></a>
+          </li>
+          <li>
+            <a href="#">Family</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -96,10 +93,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="/js/index.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 </body>
 
