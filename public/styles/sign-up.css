@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    background-color: rgb(63, 72, 204);
+}
+
+ul {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.input {
+    color: black;
+    border-color: #7A81DD;
+    background-color: whitesmoke;
+}
+
+.button {
+    color: black;
+    border-color: #7A81DD;
+    background-color: #acacac;
+}
