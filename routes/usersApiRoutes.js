@@ -28,8 +28,6 @@ module.exports = function(app) {
         res.status(500).send(err);
       });
     });
-
-    
   });
 
   // UPDATE Users name
