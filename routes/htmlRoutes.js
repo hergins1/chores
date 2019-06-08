@@ -25,9 +25,10 @@ module.exports = function(app) {
   // Show all chores for family? Show all chores for certain user?
   // Who's chore is it?
   app.get("/chores-list", function(req, res) {
-    db.Chores.findAll({}).then(function (dbChores) {
+    db.Chores.findAll({}).then(function(dbChores) {
       res.render("chores-list", {
         chores: dbChores
+      });
     });
   });
 
