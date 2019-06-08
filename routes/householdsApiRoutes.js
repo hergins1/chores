@@ -32,7 +32,7 @@ module.exports = function(app) {
   });
 
   // DELETE Households
-  app.delete("/api/households/:id", function(req, res) {
+  app.delete("/api/households/destroy/:id", function(req, res) {
     db.Households.destroy({ where: { id: req.params.id } }).then(function(
       dbHouseholds
     ) {

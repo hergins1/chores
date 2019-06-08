@@ -31,14 +31,14 @@ module.exports = function(app) {
   });
 
   // CREATE new Chores
-  app.post("/api/chores", function(req, res) {
+  app.post("/api/chores/create", function(req, res) {
     db.Chores.create(req.body).then(function(dbChores) {
       res.json(dbChores);
     });
   });
 
   // UPDATE Chores
-  app.put("/api/chores", function(req, res) {
+  app.put("/api/chores/update", function(req, res) {
     db.Chores.update(req.body.completed, {
       where: {
         id: req.body.id
@@ -49,7 +49,7 @@ module.exports = function(app) {
   });
 
   // DELETE Chores
-  app.delete("/api/chores/:id", function(req, res) {
+  app.delete("/api/chores/destroy/:id", function(req, res) {
     db.Chores.destroy({ where: { id: req.params.id } }).then(function(
       dbChores
     ) {
