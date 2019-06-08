@@ -17,6 +17,10 @@ module.exports = function(sequelize, DataTypes) {
     admin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
+    },
+    photo: {
+      type: DataTypes.STRING,
+      defaultValue: false
     }
   });
 
