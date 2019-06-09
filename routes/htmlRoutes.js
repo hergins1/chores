@@ -1,4 +1,5 @@
 var db = require("../models");
+// const bcrypt = require("bcrypt");
 
 module.exports = function(app) {
   // LOGIN PAGE
@@ -46,6 +47,28 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
+
+  // app.post("/", function(req, res) {
+  //   bcrypt.compare(req.body.password, hash, function(err, res) {
+  //     res.redirect().catch(function(err) {
+  //       console.error(err);
+  //       res.status(500).send(err);
+  //     });
+  //   });
+  // });
+
+  // Load example page and pass in an example by id
+  // app.post("/login", function(req, res) {
+  //   db.Users.findOne({ where: { username: req.body.username } }).then(function(
+  //     user
+  //   ) {
+  //     if (!user) {
+  //       res.redirect("/");
+  //     } else {
+  //     }
+  //   });
+  // });
 };
 
 // Load index page

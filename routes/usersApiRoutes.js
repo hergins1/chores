@@ -19,6 +19,22 @@ module.exports = function(app) {
     });
   });
 
+  // USER LOGIN
+  app.post("/api/user/login", function(req, res) {
+    db.Users.findOne({
+      where: { email: req.body.email }
+    }).then(function(dbUsers) {
+      res.json(dbUsers);
+      if (dbUsers.email === req.body.email) {
+        if (dbUsers.password === req.body.password) {
+          console.log("PASSWORD MATCH!");
+          res.render("/indexadmin");
+        }
+        console.log("EMAIL MATCH!");
+      }
+    });
+  });
+
   // CREATE new Users
   app.post("/api/users/create", function(req, res) {
     db.Users.create(req.body).then(function(dbUsers) {
@@ -26,11 +42,11 @@ module.exports = function(app) {
     });
   });
 
-  // UPDATE Users name
+  // UPDATE Users password
   app.put("/api/users/update/:id", function(req, res) {
     db.Users.update(
       {
-        name: req.body.name
+        password: req.body.password
       },
       {
         where: {

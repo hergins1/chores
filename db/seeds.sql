@@ -2,8 +2,8 @@ Use chores_app;
 
 INSERT INTO Households (name, email, password, createdAt, updatedAt) 
 VALUES 
-("Anderson", "anderson@gmail.com", "passwordAnderson", CURDATE(), CURDATE()),
-("Smith", "smith@yahoo.com", "passwordSmith", CURDATE(), CURDATE());
+("Anderson", CURDATE(), CURDATE()),
+("Smith", CURDATE(), CURDATE());
 
 INSERT INTO Users (name, age, admin, username, password, photo, createdAt, updatedAt, HouseholdId) 
 VALUES 
