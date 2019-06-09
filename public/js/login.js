@@ -12,7 +12,7 @@ $(document).ready(function () {
     $.ajax("/api/households/" + email, {
       type: "GET",
     }).then(
-      function () {
+      function() {
         if (email && password) {
           window.location.href = './views/.handlebars';
           return false;
