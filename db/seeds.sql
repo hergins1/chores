@@ -1,11 +1,11 @@
 Use chores_app;
 
-INSERT INTO Households (name, email, password, createdAt, updatedAt) 
+INSERT INTO Households (name, createdAt, updatedAt) 
 VALUES 
 ("Anderson", CURDATE(), CURDATE()),
 ("Smith", CURDATE(), CURDATE());
 
-INSERT INTO Users (name, age, admin, username, password, photo, createdAt, updatedAt, HouseholdId) 
+INSERT INTO Users (name, age, admin, email, password, photo, createdAt, updatedAt, HouseholdId) 
 VALUES 
 ("Rick", 55, 1, "PickRick", "12sdf&%", "photo", CURDATE(), CURDATE(), 1),
 ("Morty", 13, 0, "Mmmmorty", "48@@08", "photo", CURDATE(), CURDATE(), 1),

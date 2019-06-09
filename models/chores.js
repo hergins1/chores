@@ -23,13 +23,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATEONLY,
       allowNull: false
     },
-<<<<<<< HEAD
-=======
     photo: {
       type: DataTypes.STRING,
       defaultValue: false
     },
->>>>>>> ebaac31e04e997f0b07e7525f3058925bf3fb67c
     completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
