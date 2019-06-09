@@ -22,6 +22,7 @@ html {
 
 #headline {
   margin-top: 10px;
+  margin-bottom: 20px;
   text-align: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 36px;
@@ -79,6 +80,33 @@ html {
 }
 
 #value {
+  font-size: 20px;
+}
+
+.field {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#chore-input,
+#value-input,
+#icon-button,
+#name-input,
+#family-input,
+#user-input,
+#submit-button {
+  border: 1px solid black;
+}
+
+#button-text {
+  margin-left: 8px;
+}
+
+#submit-button {
+  margin-top: 30px;
+  background-color: gray;
+  color: white;
   font-size: 20px;
 }
 
