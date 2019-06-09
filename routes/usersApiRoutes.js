@@ -11,7 +11,35 @@ module.exports = function(app) {
     });
   });
 
+  // GET all Users in Household
+  app.get("/api/users/:id", function(req, res) {
+    db.Users.findAll({
+      where: {
+        HouseholdId: req.params.HouseholdId
+      }
+    }).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
+  // USER LOGIN
+  app.post("/api/user/login", function(req, res) {
+    db.Users.findOne({
+      where: { email: req.body.email }
+    }).then(function(dbUsers) {
+      res.json(dbUsers);
+      if (dbUsers.email === req.body.email) {
+        if (dbUsers.password === req.body.password) {
+          console.log("PASSWORD MATCH!");
+          res.render("/indexadmin");
+        }
+        console.log("EMAIL MATCH!");
+      }
+    });
+  });
+
   // CREATE new Users
+<<<<<<< HEAD
 
   app.post("/api/users", function(req, res) {
     // callback
@@ -27,14 +55,19 @@ module.exports = function(app) {
         console.error(err);
         res.status(500).send(err);
       });
+=======
+  app.post("/api/users/create", function(req, res) {
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
+>>>>>>> ebaac31e04e997f0b07e7525f3058925bf3fb67c
     });
   });
 
-  // UPDATE Users name
-  app.put("/api/users/:id", function(req, res) {
+  // UPDATE Users password
+  app.put("/api/users/update/:id", function(req, res) {
     db.Users.update(
       {
-        name: req.body.name
+        password: req.body.password
       },
       {
         where: {
@@ -47,7 +80,7 @@ module.exports = function(app) {
   });
 
   // DELETE Users
-  app.delete("/api/users/:id", function(req, res) {
+  app.delete("/api/users/destroy/:id", function(req, res) {
     db.Users.destroy({ where: { id: req.params.id } }).then(function(dbUsers) {
       res.json(dbUsers);
     });

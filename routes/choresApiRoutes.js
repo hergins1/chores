@@ -8,8 +8,19 @@ module.exports = function(app) {
     });
   });
 
-  // GET specific Chore
-  app.get("/api/chores/:id", function(req, res) {
+  // GET ALL specific Chores of certain User
+  app.get("/api/chores-all/:id", function(req, res) {
+    db.Chores.findAll({
+      where: {
+        UserId: req.params.id
+      }
+    }).then(function(dbChores) {
+      res.json(dbChores);
+    });
+  });
+
+  // GET ONE specific Chore
+  app.get("/api/chores-one/:id", function(req, res) {
     db.Chores.findOne({
       where: {
         id: req.params.id
@@ -19,7 +30,7 @@ module.exports = function(app) {
     });
   });
 
-  // GET completed Chores
+  // GET ALL completed Chores
   app.get("/api/chores/completed", function(req, res) {
     db.Chores.findAll({
       where: {
@@ -31,14 +42,14 @@ module.exports = function(app) {
   });
 
   // CREATE new Chores
-  app.post("/api/chores", function(req, res) {
+  app.post("/api/chores/create", function(req, res) {
     db.Chores.create(req.body).then(function(dbChores) {
       res.json(dbChores);
     });
   });
 
   // UPDATE Chores
-  app.put("/api/chores", function(req, res) {
+  app.put("/api/chores/update", function(req, res) {
     db.Chores.update(req.body.completed, {
       where: {
         id: req.body.id
@@ -49,7 +60,7 @@ module.exports = function(app) {
   });
 
   // DELETE Chores
-  app.delete("/api/chores/:id", function(req, res) {
+  app.delete("/api/chores/destroy/:id", function(req, res) {
     db.Chores.destroy({ where: { id: req.params.id } }).then(function(
       dbChores
     ) {

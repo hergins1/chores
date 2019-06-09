@@ -1,18 +1,20 @@
 Use chores_app;
 
-INSERT INTO Households (name, createdAt, updatedAt) VALUES ("Anderson", CURDATE(), CURDATE());
-INSERT INTO Households (name, createdAt, updatedAt) VALUES ("Smith", CURDATE(), CURDATE());
+INSERT INTO Households (name, email, password, createdAt, updatedAt) 
+VALUES 
+("Anderson", CURDATE(), CURDATE()),
+("Smith", CURDATE(), CURDATE());
 
-INSERT INTO Users (name, age, admin, createdAt, updatedAt, HouseholdId) VALUES ("Rick", 55, 1, CURDATE(), CURDATE(), 1);
-INSERT INTO Users (name, age, admin, createdAt, updatedAt, HouseholdId) VALUES ("Morty", 13, 0, CURDATE(), CURDATE(), 1);
-INSERT INTO Users (name, age, admin, createdAt, updatedAt, HouseholdId) VALUES ("Summer", 18, 0, CURDATE(), CURDATE(), 2);
-INSERT INTO Users (name, age, admin, createdAt, updatedAt, HouseholdId) VALUES ("Beth", 35, 1, CURDATE(), CURDATE(), 1);
-INSERT INTO Users (name, age, admin, createdAt, updatedAt, HouseholdId) VALUES ("Jerry", 35, 1, CURDATE(), CURDATE(), 2);
+INSERT INTO Users (name, age, admin, username, password, photo, createdAt, updatedAt, HouseholdId) 
+VALUES 
+("Rick", 55, 1, "PickRick", "12sdf&%", "photo", CURDATE(), CURDATE(), 1),
+("Morty", 13, 0, "Mmmmorty", "48@@08", "photo", CURDATE(), CURDATE(), 1),
+("Summer", 18, 0, "SummerRules", "39(#8D", "photo", CURDATE(), CURDATE(), 2),
+("Beth", 35, 1, "MammaBear", "(#89JE", "photo", CURDATE(), CURDATE(), 1),
+("Jerry", 35, 1, "Dad", "password", "photo", CURDATE(), CURDATE(), 2);
 
-INSERT INTO Chores (name, value, completed, createdAt, updatedAt, UserId) VALUES ("Clean room", 5, 0, CURDATE(), CURDATE(), 1);
-INSERT INTO Chores (name, value, completed, createdAt, updatedAt, UserId) VALUES ("Wash car", 10, 0, CURDATE(), CURDATE(), 2);
-INSERT INTO Chores (name, value, completed, createdAt, updatedAt, UserId) VALUES ("Dishes", 3, 0, CURDATE(), CURDATE(), 3);
-
-INSERT INTO Photos (data, createdAt, updatedAt, ChoreId) VALUES ("https://www.sterlingcleaning.net/wp-content/uploads/2017/01/Spring-Cleaning-the-Bedroom-1.jpg", CURDATE(), CURDATE(), 1);
-INSERT INTO Photos (data, createdAt, updatedAt, ChoreId) VALUES ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYcdWNziH6y-2G_UszUQt0rZ_lpuzPkYhb7IPVHek6M-Zr5CBGjA", CURDATE(), CURDATE(), 2);
-INSERT INTO Photos (data, createdAt, updatedAt, ChoreId) VALUES ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwfzvqvp4FZx5Ay2nNZAWwUemTHRJ3srjQWMdukN79Yi4FZ2k", CURDATE(), CURDATE(), 3);
+INSERT INTO Chores (name, value, due, photo, completed, createdAt, updatedAt, UserId) 
+VALUES 
+("Clean room", 5, "2019-06-15", "photo", 1, CURDATE(), CURDATE(), 1),
+("Wash car", 10, "2019-06-15", "photo", 1, CURDATE(), CURDATE(), 2),
+("Dishes", 3, "2019-06-15", "photo", 0, CURDATE(), CURDATE(), 1);
