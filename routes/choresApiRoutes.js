@@ -43,7 +43,11 @@ module.exports = function(app) {
 
   // CREATE new Chores
   app.post("/api/chores/create", function(req, res) {
-    db.Chores.create(req.body).then(function(dbChores) {
+    db.Chores.create({
+      name: req.body.name,
+      value: req.body.value,
+      photot: req.body.photo
+    }).then(function(dbChores) {
       res.json(dbChores);
     });
   });

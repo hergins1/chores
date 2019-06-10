@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Chores = sequelize.define("Chores", {
     name: {
       type: DataTypes.STRING,
@@ -8,24 +8,22 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     value: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    // created: {
-    //   // TIMESTAMP: https://github.com/sequelize/sequelize/issues/9363
-    //   type: "TIMESTAMP",
-    //   allowNull: false
-    // },
     due: {
       type: DataTypes.DATEONLY,
       allowNull: false
     },
     photo: {
       type: DataTypes.STRING,
-      defaultValue: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     completed: {
       type: DataTypes.BOOLEAN,
@@ -33,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Chores.associate = function(models) {
+  Chores.associate = function (models) {
     Chores.belongsTo(models.Users, {
       foreignKey: {
         allowNull: false
