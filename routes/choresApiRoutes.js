@@ -46,7 +46,7 @@ module.exports = function(app) {
     db.Chores.create({
       name: req.body.name,
       value: req.body.value,
-      photot: req.body.photo
+      photo: req.body.photo
     }).then(function(dbChores) {
       res.json(dbChores);
     });
