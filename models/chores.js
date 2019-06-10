@@ -19,10 +19,14 @@ module.exports = function(sequelize, DataTypes) {
     //   type: "TIMESTAMP",
     //   allowNull: false
     // },
-    // due: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false
-    // },
+    due: {
+      type: DataTypes.DATEONLY,
+      allowNull: false
+    },
+    photo: {
+      type: DataTypes.STRING,
+      defaultValue: false
+    },
     completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
@@ -36,5 +40,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
+
   return Chores;
 };
