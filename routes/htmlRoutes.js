@@ -26,7 +26,7 @@ module.exports = function(app) {
   app.get("/chores-list", function(req, res) {
     db.Chores.findAll({}).then(function(dbChores) {
       res.render("chores-list", {
-        chores: dbChores
+        Chores: dbChores
       });
     });
   });
