@@ -74,9 +74,13 @@ html {
   font-size: 18px;
 }
 
+#task,
+#task-admin { 
+  margin-left: 15px;
+}
+
 #task {
   width: 200px;
-  margin-left: 15px;
 }
 
 #value {

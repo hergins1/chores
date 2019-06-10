@@ -7,14 +7,17 @@ VALUES
 
 INSERT INTO Users (name, age, admin, email, password, photo, createdAt, updatedAt, HouseholdId) 
 VALUES 
-("Rick", 55, 1, "PickRick", "12sdf&%", "photo", CURDATE(), CURDATE(), 1),
-("Morty", 13, 0, "Mmmmorty", "48@@08", "photo", CURDATE(), CURDATE(), 1),
-("Summer", 18, 0, "SummerRules", "39(#8D", "photo", CURDATE(), CURDATE(), 2),
-("Beth", 35, 1, "MammaBear", "(#89JE", "photo", CURDATE(), CURDATE(), 1),
-("Jerry", 35, 1, "Dad", "password", "photo", CURDATE(), CURDATE(), 2);
+("Erik", 28, 1, "ehergins", "ehergins", ".images/avatars/erik.png", CURDATE(), CURDATE(), 1),
+("Jason", 26, 0, "jmoore", "jmoore", ".images/avatars/jason.png", CURDATE(), CURDATE(), 1),
+("Jonathan", 26, 1, "jorlowski", "jorlowski", ".images/avatars/jonathan.png", CURDATE(), CURDATE(), 1),
+("Josh", 39, 0, "jbradley", "jbradley", "./images/avatars/josh.png", CURDATE(), CURDATE(), 1),
 
 INSERT INTO Chores (name, value, due, photo, completed, createdAt, updatedAt, UserId) 
 VALUES 
-("Clean room", 5, "2019-06-15", "photo", 1, CURDATE(), CURDATE(), 1),
-("Wash car", 10, "2019-06-15", "photo", 1, CURDATE(), CURDATE(), 2),
-("Dishes", 3, "2019-06-15", "photo", 0, CURDATE(), CURDATE(), 1);
+("Vacuum The Floor", 2, "2019-06-15", "./images/chore-icons/vacuum.png", 0, CURDATE(), CURDATE(), 1),
+("Clean The Bathroom", 3, "2019-06-15", "./images/chore-icons/bathroom.png", 0, CURDATE(), CURDATE(), 1),
+("Do The Laundry", 4, "2019-06-15", "./images/chore-icons/laundry.png", 0, CURDATE(), CURDATE(), 1),
+("Do The Dishes", 2, "2019-06-15", "./images/chore-icons/dishes.png", 0, CURDATE(), CURDATE(), 1),
+("Take Out The Trash", 2, "2019-06-15", "./images/chore-icons/trash.png", 0, CURDATE(), CURDATE(), 1),
+("Mow The Lawn", 10, "2019-06-15", "./images/chore-icons/mowing.png", 0, CURDATE(), CURDATE(), 1),
+("Walk The Dog", 4, "2019-06-15", "./images/chore-icons/dog.png", 0, CURDATE(), CURDATE(), 1);
