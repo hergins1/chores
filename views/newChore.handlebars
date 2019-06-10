@@ -1,0 +1,51 @@
+<h1 id="headline">Create A New Chore</h1>
+
+<div class="field">
+  <label class="label">Chore Description</label>
+  <div class="control has-icons-left">
+    <input id="name" class="input is-rounded" type="text" placeholder="Chore">
+    <span class="icon is-small is-left">
+      <i class="fas fa-home"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Pay Amount</label>
+  <div class="control has-icons-left">
+    <input id="value" class="input is-rounded" type="text" placeholder="Amount">
+    <span class="icon is-small is-left">
+      <i class="fas fa-dollar-sign"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Choose Icon</label>
+  <button class="button is-white is-rounded" id="icon-button">
+    <i class="far fa-image"></i>
+    <span id="button-text">Choose Icon</span>
+  </button>
+</div>
+
+<div class="field">
+  <button class="button is-white is-rounded" id="submit-button">
+    <i class="fas fa-check"></i>
+    <span id="button-text">Submit</span>
+  </button>
+</div>
+
+<div id="task-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p>
+      <span id="task-desc"></span>
+      <span id="task-value"></span>
+      <form>
+        <input type="checkbox" name="completed" value="completed">Mark As Complete!>
+        <button>Submit</button>
+      </form>
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>

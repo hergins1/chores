@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Chores = sequelize.define("Chores", {
     name: {
       type: DataTypes.STRING,
@@ -8,12 +8,24 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     value: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       validate: {
         len: [1]
       }
     },
+    due: {
+      type: DataTypes.DATEONLY,
+      allowNull: false
+    },
+    photo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+<<<<<<< HEAD
     // created: {
     //   // TIMESTAMP: https://github.com/sequelize/sequelize/issues/9363
     //   type: "TIMESTAMP",
@@ -23,13 +35,15 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATEONLY,
       allowNull: false
     },
+=======
+>>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
     completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
   });
 
-  Chores.associate = function(models) {
+  Chores.associate = function (models) {
     Chores.belongsTo(models.Users, {
       foreignKey: {
         allowNull: false
@@ -37,10 +51,5 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  Chores.associate = function(models) {
-    Chores.hasMany(models.Photos, {
-      onDelete: "cascade"
-    });
-  };
   return Chores;
 };

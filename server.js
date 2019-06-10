@@ -1,7 +1,12 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+<<<<<<< HEAD
 // const bodyParser = require("body-parser");
+=======
+const bcrypt = require("bcrypt");
+
+>>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
 
 var db = require("./models");
 
@@ -24,7 +29,6 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/photosApiRoutes")(app);
 require("./routes/choresApiRoutes")(app);
 require("./routes/householdsApiRoutes")(app);
 require("./routes/usersApiRoutes")(app);
