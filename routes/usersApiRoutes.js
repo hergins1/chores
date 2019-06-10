@@ -1,4 +1,5 @@
 var db = require("../models");
+const bcrypt = require("bcrypt");
 
 module.exports = function(app) {
   // GET all Users
@@ -36,9 +37,24 @@ module.exports = function(app) {
   });
 
   // CREATE new Users
+  // app.post("/api/users/create", function(req, res) {
+  //   db.Users.create(req.body).then(function(dbUsers) {
+  //     res.json(dbUsers);
+  //   });
+  // });
+
   app.post("/api/users/create", function(req, res) {
-    db.Users.create(req.body).then(function(dbUsers) {
-      res.json(dbUsers);
+    bcrypt.hash(req.body.password, 10, function(err, hash) {
+      req.body.password = hash;
+      db.Users.create(req.body)
+        .then(function() {
+          res.render("/indexadmin");
+        })
+        .catch(function(err) {
+          console.error(err);
+          res.status(500).send(err);
+        });
+      // need to route to the user dashboard
     });
   });
 

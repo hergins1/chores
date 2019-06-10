@@ -1,6 +1,8 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+const bcrypt = require("bcrypt");
+
 
 var db = require("./models");
 
