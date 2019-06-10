@@ -2,29 +2,27 @@ var db = require("../models");
 // const bcrypt = require("bcrypt");
 
 module.exports = function(app) {
-  // LOGIN PAGE
-  app.get("/login", function(req, res) {
+  // LOGIN PAGE: WORKING
+  app.get("/", function(req, res) {
     res.render("login");
   });
 
-  // SIGNUP PAGE
-  app.get("/signin", function(req, res) {
+  // SIGNUP PAGE: WORKING
+  app.get("/signup", function(req, res) {
     res.render("signup");
   });
 
-  // NEW USER PAGE
+  // NEW USER PAGE: WORKING
   app.get("/new-user", function(req, res) {
     res.render("newUser");
   });
 
-  // NEW CHORE PAGE
+  // NEW CHORE PAGE: WORKING
   app.get("/new-chore", function(req, res) {
     res.render("newChore");
   });
 
-  // CHORES LIST PAGE
-  // Show all chores for family? Show all chores for certain user?
-  // Who's chore is it?
+  // CHORES LIST PAGE: NOT WORKING!!
   app.get("/chores-list", function(req, res) {
     db.Chores.findAll({}).then(function(dbChores) {
       res.render("chores-list", {
@@ -33,12 +31,12 @@ module.exports = function(app) {
     });
   });
 
-  // ADMIN VIEW
+  // ADMIN VIEW: WORKING
   app.get("/admin", function(req, res) {
     res.render("indexadmin");
   });
 
-  // USER VIEW
+  // USER VIEW: WORKING
   app.get("/user", function(req, res) {
     res.render("indexuser");
   });

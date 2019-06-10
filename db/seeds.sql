@@ -10,7 +10,7 @@ VALUES
 ("Erik", 28, 1, "ehergins", "ehergins", ".images/avatars/erik.png", CURDATE(), CURDATE(), 1),
 ("Jason", 26, 0, "jmoore", "jmoore", ".images/avatars/jason.png", CURDATE(), CURDATE(), 1),
 ("Jonathan", 26, 1, "jorlowski", "jorlowski", ".images/avatars/jonathan.png", CURDATE(), CURDATE(), 1),
-("Josh", 39, 0, "jbradley", "jbradley", "./images/avatars/josh.png", CURDATE(), CURDATE(), 1),
+("Josh", 39, 0, "jbradley", "jbradley", "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
 
 INSERT INTO Chores (name, value, due, photo, completed, createdAt, updatedAt, UserId) 
 VALUES 
