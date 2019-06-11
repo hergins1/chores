@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="styles.styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <!-- Favicon -->
-  <link rel="icon" type="favicon/png" href="images/favicon.png">
+  <link rel="icon" type="favicon/png" href="./images/favicon.png">
   <title>Chorz</title>
 </head>
 
@@ -23,8 +23,8 @@
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand" id="navBar">
-      <a class="navbar-item" href="#">
-        <img src="./images/logo.png" alt="Chorz">
+      <a class="navbar-item" href="/">
+        <img src="images/logo.png" alt="Chorz" id="chorzLogo">
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -43,57 +43,67 @@
 
   <footer>
     <div id="footer-icons" class="columns is-mobile has-text-centered">
-      <div class="column is-one-quarter">
-        <ul class="list-unstyled text-center">
-          <li>
-            <a href="#"><i class="fas fa-home"></i></a>
-          </li>
-          <li>
-            <a href="#">Home</a>
-          </li>
-        </ul>
-      </div>
-      <div class="column is-one-quarter">
-        <ul class="list-unstyled text-center">
-          <li>
-            <a href="#"><i class="fas fa-list-ul"></i></a>
-          </li>
-          <li>
-            <a href="#">Chores</a>
-          </li>
-        </ul>
-      </div>
-      <div class="column is-one-quarter">
-        <ul class="list-unstyled center">
-          <li>
-            <a href="#"><i class="fas fa-comments"></i></a>
-          </li>
-          <li>
-            <a href="#">Message</a>
-          </li>
-        </ul>
-      </div>
-      <div class="column is-one-quarter">
-        <ul class="list-unstyled text-center">
-          <li>
-            <a href="#"><i class="fas fa-users"></i></a>
-          </li>
-          <li>
-            <a href="#">Family</a>
-          </li>
-        </ul>
-      </div>
+
+      <a href="/user">
+        <div class="column is-one-quarter">
+          <ul class="list-unstyled text-center">
+            <li>
+              <i class="fas fa-home"></i>
+            </li>
+            <li>
+              Home
+            </li>
+          </ul>
+        </div>
+      </a>
+      <a href="/chores-list">
+        <div class="column is-one-quarter">
+          <ul class="list-unstyled text-center">
+            <li>
+              <i class="fas fa-list-ul"></i>
+            </li>
+            <li>
+              Chores
+            </li>
+          </ul>
+        </div>
+      </a>
+      <a href="#">
+        <div class="column is-one-quarter">
+          <ul class="list-unstyled center">
+            <li>
+              <i class="fas fa-comments"></i>
+            </li>
+            <li>
+              Message
+            </li>
+          </ul>
+        </div>
+      </a>
+      <a href="/family">
+        <div class="column is-one-quarter">
+          <ul class="list-unstyled text-center">
+            <li>
+              <i class="fas fa-users"></i>
+            </li>
+            <li>
+              Family
+            </li>
+          </ul>
+        </div>
+      </a>
 
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="./js/javascript.js"></script>
+
 
 </body>
 
