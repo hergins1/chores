@@ -6,6 +6,9 @@ $(document).ready(function() {
       name: $("#userName")
         .val()
         .trim(),
+      age: $("#age")
+        .val()
+        .trim(),
       household: $("#houseName")
         .val()
         .trim(),
@@ -23,7 +26,7 @@ $(document).ready(function() {
     // console.log(password);
     $.ajax({
       type: "POST",
-      url: "/api/households/create",
+      url: "/api/users/create",
       data: householdInfo
     }).then(function(result) {
       console.log(result);
