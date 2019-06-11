@@ -10,6 +10,7 @@ $(document).ready(function() {
     console.log(household);
     console.log(email);
     console.log(password);
+    
     $.ajax("/api/households/create", {
       type: "POST"
     }).then(

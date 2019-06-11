@@ -4,12 +4,12 @@ var db = require("../models");
 module.exports = function(app) {
   // LOGIN PAGE: WORKING
   app.get("/", function(req, res) {
-    res.render("login");
+    res.render("login", {layout: "access.handlebars"});
   });
 
   // SIGNUP PAGE: WORKING
   app.get("/signup", function(req, res) {
-    res.render("signup");
+    res.render("signup", {layout: "access.handlebars"});
   });
 
   // NEW USER PAGE: WORKING
