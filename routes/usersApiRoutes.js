@@ -26,8 +26,6 @@ module.exports = function(app) {
       where: { email: req.body.email }
     }).then(function(dbUsers) {
       res.json(dbUsers);
-      // console.log(dbUsers);
-      if (dbUsers.email === req.body.email) {
         if (dbUsers.password === req.body.password) {
           console.log("PASSWORD MATCH!");
           if (dbUsers.admin) {
@@ -36,8 +34,6 @@ module.exports = function(app) {
         } else {
           res.render("/indexuser");
         }
-      }
-        console.log("EMAIL MATCH!");
       }
     });
   });
