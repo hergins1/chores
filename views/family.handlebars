@@ -1,11 +1,11 @@
-<h1 id="headline">Chore List</h1>
+<h1 id="headline">My Family</h1>
 
-{{#each Chores}}
+{{#each Users}}
 <div class="columns is-mobile is-centered">
   <div id="task-card" class="column is-10">
     <img id="task-icon" src="{{ photo }}">
     <div id="task">{{ name }}</div>
-    <div id="value" class="has-text-right">${{ value }}</div>
+    <div id="value" class="has-text-right">{{ age }}</div>
   </div>
 </div>
 {{/each}}
