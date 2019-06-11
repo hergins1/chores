@@ -26,15 +26,34 @@ module.exports = function(app) {
       where: { email: req.body.email }
     }).then(function(dbUsers) {
       res.json(dbUsers);
+      // console.log(dbUsers);
       if (dbUsers.email === req.body.email) {
         if (dbUsers.password === req.body.password) {
           console.log("PASSWORD MATCH!");
+          if (dbUsers.admin) {
+            console.log("ADMIN");
           res.render("/indexadmin");
+        } else {
+          res.render("/indexuser");
         }
+      }
         console.log("EMAIL MATCH!");
       }
     });
   });
+
+  // app.get("/api/user/admin", function(req, res) {
+  //   db.Users.findOne({
+  //     where: { email: req.body.email }
+  //   }).then(function(dbUsers) {
+  //     res.json(dbUsers);
+  //       if (dbUsers.admin) {
+  //         res.render("/indexadmin");
+  //       } else {
+  //         res.render("/indexuser")
+  //       }
+  //   });
+  // });
 
   // CREATE new Users
   // app.post("/api/users/create", function(req, res) {
@@ -48,7 +67,8 @@ module.exports = function(app) {
       req.body.password = hash;
       db.Users.create(req.body)
         .then(function() {
-          res.render("/indexadmin");
+          // DOES NOT RENDER THE NEXT PAGE
+          // res.render("/indexadmin");
         })
         .catch(function(err) {
           console.error(err);
