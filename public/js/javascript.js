@@ -6,3 +6,4 @@ $(document).on("click", "#task-card", function(event) {
 $(".modal-close").on("click", function() {
   $(".modal").removeClass("is-active");
 });
+
