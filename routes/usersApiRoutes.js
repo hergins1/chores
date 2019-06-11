@@ -1,6 +1,9 @@
 var db = require("../models");
 const bcrypt = require("bcrypt");
 
+const bcrypt = require('bcrypt');
+
+
 module.exports = function(app) {
   // GET all Users
   app.get("/api/users", function(req, res) {

@@ -1,5 +1,5 @@
 var db = require("../models");
-// const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 module.exports = function(app) {
   // LOGIN PAGE: WORKING
@@ -56,45 +56,40 @@ module.exports = function(app) {
   });
 };
 
-//   app.post("/", function(req, res) {
-//     bcrypt.compare(req.body.password, hash, function(err, res) {
-//       res.redirect().catch(function(err) {
-//         console.error(err);
-//         res.status(500).send(err);
-//       });
-//     });
-//   });
+  app.post("/login", function(req, res) {
+    db.Users.findOne({ where: { email: req.body.email } }).then(function(user) {
+      if (!user) {
+        console.log("Email not found")
+        //send login error message        
+        res.redirect("/login");
+      } else {
+        bcrypt.compare(req.body.password, user.password, function(err, res) {
+          // console.log(res)
+          // console.log("successful")
+          res.redirect("indexadmin")
+          .catch(function (err) {
+          console.error(err);
+          res.status(500).send(err);
+          });
+        });
+      }
+    });
+  });
+};
 
-//   // Load example page and pass in an example by id
-//   app.post("/login", function(req, res) {
-//     db.Users.findOne({ where: { username: req.body.username } }).then(function(
-//       user
-//     ) {
-//       if (!user) {
-//         res.redirect("/");
-//       } else {
-//       }
-//     });
-//   });
-// };
+app.post("/user/create", function(req, res) {
+  
+  bcrypt.hash(req.body.password, 10, function(err, hash) {
+    if (err) throw err;
+    req.body.password = hash;
 
-// Load index page
-// app.get("/", function (req, res) {
-//   db.Example.findAll({}).then(function (dbExamples) {
-//     res.render("index", {
-//       msg: "Welcome!",
-//       examples: dbExamples
-//     });
-//   });
-// });
-
-// Load example page and pass in an example by id
-// app.get("/example/:id", function (req, res) {
-//   db.Example.findOne({ where: { id: req.params.id } }).then(function (
-//     dbExample
-//   ) {
-//     res.render("example", {
-//       example: dbExample
-//     });
-//   });
-// });
+    db.Users.create(req.body)
+    .then(function(dbUsers) {
+      res.redirect("indexuser");
+    })
+    .catch(function(err) {
+      console.error(err);
+      res.status(500).send(err);
+    });
+  });
+});
