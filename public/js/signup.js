@@ -1,15 +1,20 @@
 $(document).ready(function() {
   $("#submitBttn").on("click", function() {
+    event.preventDefault();
     let name = $("#userName").val().trim();
     let household = $("#houseName").val().trim();
     let email = $("#email").val().trim();
-    let pasword = $("#password").val().trim();
+    let password = $("#password").val().trim();
 
-    $.ajax("/api/households" + email, {
+    console.log(name);
+    console.log(household);
+    console.log(email);
+    console.log(password);
+    $.ajax("/api/households/create", {
       type: "POST"
     }).then(
-      function() {
-        //???
+      function(result) {
+        console.log(result);
       }
     );
   });
