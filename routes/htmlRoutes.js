@@ -56,15 +56,32 @@ module.exports = function(app) {
         res.redirect("/login");
       } else {
         bcrypt.compare(req.body.password, user.password, function(err, res) {
-          console.log(res)
-          console.log("successful")
-          // res.redirect("indexadmin");
-          // .catch(function (err) {
-          // console.error(err);
-          // res.status(500).send(err);
-          // });
+          // console.log(res)
+          // console.log("successful")
+          res.redirect("indexadmin")
+          .catch(function (err) {
+          console.error(err);
+          res.status(500).send(err);
+          });
         });
       }
     });
   });
 };
+
+app.post("/user/create", function(req, res) {
+  
+  bcrypt.hash(req.body.password, 10, function(err, hash) {
+    if (err) throw err;
+    req.body.password = hash;
+
+    db.Users.create(req.body)
+    .then(function(dbUsers) {
+      res.redirect("indexuser");
+    })
+    .catch(function(err) {
+      console.error(err);
+      res.status(500).send(err);
+    });
+  });
+});
