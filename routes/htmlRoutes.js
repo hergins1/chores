@@ -22,11 +22,20 @@ module.exports = function(app) {
     res.render("newChore");
   });
 
-  // CHORES LIST PAGE: NOT WORKING!!
+  // CHORES LIST PAGE: WORKING
   app.get("/chores-list", function(req, res) {
     db.Chores.findAll({}).then(function(dbChores) {
       res.render("chores-list", {
         Chores: dbChores
+      });
+    });
+  });
+
+  // FAMILY LIST PAGE: WORKING
+  app.get("/family", function(req, res) {
+    db.Users.findAll({}).then(function(dbUsers) {
+      res.render("family", {
+        Users: dbUsers
       });
     });
   });
