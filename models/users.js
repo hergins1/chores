@@ -32,9 +32,18 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    balance: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+      validate: {
+        len: [1]
+      }
+    },
     photo: {
       type: DataTypes.STRING,
-      defaultValue: false
+      defaultValue: false,
+      allowNull: true
     }
   });
 
