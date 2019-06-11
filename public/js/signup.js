@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("#submitBttn").on("click", function() {
     event.preventDefault();
 
-    var householdInfo = {
+    let householdInfo = {
       name: $("#userName")
         .val()
         .trim(),
