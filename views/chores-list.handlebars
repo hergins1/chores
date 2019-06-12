@@ -9,3 +9,32 @@
   </div>
 </div>
 {{/each}}
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+
+    <h1 id="headline">Assign A User</h1>
+
+    <div class="columns is-mobile is-centered">
+      <div id="icon-card" class="column is-8">
+        <div class="field">
+          <label class="label">Admin</label>
+          <div class="control has-icons-left">
+            <span class="select is-rounded">
+              <select id="user-input">
+                <option selected></option>
+                <option></option>
+                <option></option>
+              </select>
+            </span>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
