@@ -118,3 +118,26 @@ $(document).on("click", "#newAvatarButton", function (event) {
 $(".modal-close").on("click", function () {
   $(".modal").removeClass("is-active");
 });
+<<<<<<< HEAD
+=======
+
+function modalChore() {
+  $("#newChoreIcon").empty();
+  for (let i = 0; i < icons.length; i++) {
+    const iconCard = $("<img>");
+    iconCard
+      .attr("src", icons[i].photo);
+    $("#newChoreIcon").append(iconCard);
+  }
+};
+
+function modalAvatar() {
+  $("#newAvatar").empty();
+  for (let i = 0; i < avatars.length; i++) {
+    const iconCard = $("<img>");
+    iconCard
+      .attr("src", avatars[i].photo);
+    $("#newAvatar").append(iconCard);
+  }
+};
+>>>>>>> dd0d91e02ab726f22ab7bd7895f0ac6d9707697b
