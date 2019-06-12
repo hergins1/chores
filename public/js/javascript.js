@@ -128,6 +128,14 @@ const avatars = [
     name: "Josh",
     photo: "./images/avatars/josh.png"
   },
+  {
+    name: "Caleb",
+    photo: "./images/avatars/caleb.png"
+  },
+  {
+    name: "caitlin",
+    photo: "./images/avatars/caitlin.png"
+  }
 ];
 
 $(document).on("click", "#task-card", function (event) {
