@@ -1,17 +1,22 @@
 require("dotenv").config();
+<<<<<<< HEAD
 var express = require("express");
 var exphbs = require("express-handlebars");
 <<<<<<< HEAD
 // const bodyParser = require("body-parser");
 =======
+=======
+const express = require("express");
+const exphbs = require("express-handlebars");
+>>>>>>> e8f09724ef7c3a504049b6fc10d9b677cf413b03
 const bcrypt = require("bcrypt");
 
 >>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
 
-var db = require("./models");
+const db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+let PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
