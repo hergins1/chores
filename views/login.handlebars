@@ -16,18 +16,22 @@
           </div>
         </div>
         <div class="level">
-          <ul>
+          
+          {{!-- <ul> --}}
+            <form action="/user/login" method="POST">
             <div class="level">
-              <input type="email" class="input is-medium is-rounded" placeholder="Email" id="logInEmail">
+              <input type="email" class="input is-medium is-rounded" placeholder="Email" id="logInEmail" name="email">
             </div>
             <div class="level">
-              <input type="password" class="input is-medium is-rounded" placeholder="Password" id="logInPassword">
+              <input type="password" class="input is-medium is-rounded" placeholder="Password" id="logInPassword" name="password">
             </div>
             <div class="level">
-              <button class="button" id="logInBttn">Log In</button>
+              <button class="button" id="logInBttn" type="submit">Log In</button>
               <p id="wrongPW"></p>
             </div>
-          </ul>
+          {{!-- </ul> --}}
+          </form>
+
         </div>
       </div>
     </div>
