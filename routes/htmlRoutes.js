@@ -51,10 +51,13 @@ module.exports = function(app) {
         console.log("PASSWORD MATCH!");
         if (dbUsers.admin) {
           console.log("ADMIN");
-          res.render("indexadmin");
+          // res.render("indexadmin");
+          res.redirect("/admin");
         } else {
-          res.render("indexuser");
+          res.redirect("/user");
         }
+      } else {
+        res.status(400).end();
       }
     });
   });
