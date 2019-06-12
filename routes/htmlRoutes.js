@@ -2,43 +2,50 @@ var db = require("../models");
 // const bcrypt = require("bcrypt");
 
 module.exports = function(app) {
-  // LOGIN PAGE
-  app.get("/login", function(req, res) {
-    res.render("login");
+  // LOGIN PAGE: WORKING
+  app.get("/", function(req, res) {
+    res.render("login", {layout: "access.handlebars"});
   });
 
-  // SIGNUP PAGE
-  app.get("/signin", function(req, res) {
-    res.render("signup");
+  // SIGNUP PAGE: WORKING
+  app.get("/signup", function(req, res) {
+    res.render("signup", {layout: "access.handlebars"});
   });
 
-  // NEW USER PAGE
+  // NEW USER PAGE: WORKING
   app.get("/new-user", function(req, res) {
     res.render("newUser");
   });
 
-  // NEW CHORE PAGE
+  // NEW CHORE PAGE: WORKING
   app.get("/new-chore", function(req, res) {
     res.render("newChore");
   });
 
-  // CHORES LIST PAGE
-  // Show all chores for family? Show all chores for certain user?
-  // Who's chore is it?
+  // CHORES LIST PAGE: WORKING
   app.get("/chores-list", function(req, res) {
     db.Chores.findAll({}).then(function(dbChores) {
       res.render("chores-list", {
-        chores: dbChores
+        Chores: dbChores
       });
     });
   });
 
-  // ADMIN VIEW
+  // FAMILY LIST PAGE: WORKING
+  app.get("/family", function(req, res) {
+    db.Users.findAll({}).then(function(dbUsers) {
+      res.render("family", {
+        Users: dbUsers
+      });
+    });
+  });
+
+  // ADMIN VIEW: WORKING
   app.get("/admin", function(req, res) {
     res.render("indexadmin");
   });
 
-  // USER VIEW
+  // USER VIEW: WORKING
   app.get("/user", function(req, res) {
     res.render("indexuser");
   });

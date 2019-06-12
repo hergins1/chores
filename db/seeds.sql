@@ -5,12 +5,19 @@ VALUES
 ("Anderson", CURDATE(), CURDATE()),
 ("Smith", CURDATE(), CURDATE());
 
-INSERT INTO Users (name, age, admin, email, password, photo, createdAt, updatedAt, HouseholdId) 
+INSERT INTO Users (name, age, admin, email, password, balance, photo, createdAt, updatedAt, HouseholdId) 
 VALUES 
+<<<<<<< HEAD
 ("Erik", 28, 1, "ehergins", "ehergins", ".images/avatars/erik.png", CURDATE(), CURDATE(), 1),
 ("Jason", 26, 0, "jmoore", "jmoore", ".images/avatars/jason.png", CURDATE(), CURDATE(), 1),
 ("Jonathan", 26, 1, "jorlowski", "jorlowski", ".images/avatars/jonathan.png", CURDATE(), CURDATE(), 1),
 ("Josh", 39, 0, "jbradley", "jbradley", "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
+=======
+("Erik", 28, 1, "ehergins", "ehergins", 0, "./images/avatars/erik.png", CURDATE(), CURDATE(), 2),
+("Jason", 26, 0, "jmoore", "jmoore", 20, "./images/avatars/jason.png", CURDATE(), CURDATE(), 1),
+("Jonathan", 26, 1, "jorlowski", "jorlowski", 0, "./images/avatars/jonathan.png", CURDATE(), CURDATE(), 2),
+("Josh", 39, 0, "jbradley", "jbradley", 10, "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
+>>>>>>> 69086498af644fbc5dc49f175d7c4d5ee166b843
 
 <<<<<<< HEAD
 INSERT INTO Chores (name, value, due, completed, createdAt, updatedAt, UserId) VALUES ("Clean room", 5, "2019-06-30", 0, CURDATE(), CURDATE(), 1);
@@ -29,5 +36,9 @@ VALUES
 ("Do The Dishes", 2, "2019-06-15", "./images/chore-icons/dishes.png", 0, CURDATE(), CURDATE(), 1),
 ("Take Out The Trash", 2, "2019-06-15", "./images/chore-icons/trash.png", 0, CURDATE(), CURDATE(), 1),
 ("Mow The Lawn", 10, "2019-06-15", "./images/chore-icons/mowing.png", 0, CURDATE(), CURDATE(), 1),
+<<<<<<< HEAD
 ("Walk The Dog", 4, "2019-06-15", "./images/chore-icons/dog.png", 0, CURDATE(), CURDATE(), 1);
 >>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
+=======
+("Walk The Dog", 4, "2019-06-15", "./images/chore-icons/dog.png", 0, CURDATE(), CURDATE(), 1);
+>>>>>>> 69086498af644fbc5dc49f175d7c4d5ee166b843

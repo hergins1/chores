@@ -2,7 +2,7 @@
 
 <div class="columns is-mobile">
   <div class="column is-half">
-    <img id="profile-pic" src="./images/profile-pic.png" alt="Profile Pic">
+    <img id="profile-pic" src="./images/avatars/josh.png" alt="Profile Pic">
   </div>
   <div id="profile-info" class="column">
     <ul class="list-unstyled">
@@ -14,7 +14,7 @@
 
 <div class="columns is-mobile is-centered">
   <div id="task-card" class="column is-10">
-    <img id="task-icon" src="./images/vacuum.png">
+    <img id="task-icon" src="./images/chore-icons/vacuum.png">
     <div id="task">Vacuum The Floor</div>
     <div id="value" class="has-text-right">$2.00</div>
   </div>
@@ -22,7 +22,7 @@
 
 <div class="columns is-mobile is-centered">
   <div id="task-card" class="column is-10">
-    <img id="task-icon" src="./images/bathroom.png">
+    <img id="task-icon" src="./images/chore-icons/bathroom.png">
     <div id="task">Clean The Bathroom</div>
     <div id="value">$3.00</div>
   </div>
@@ -30,7 +30,7 @@
 
 <div class="columns is-mobile is-centered">
   <div id="task-card" class="column is-10">
-    <img id="task-icon" src="./images/laundry.png">
+    <img id="task-icon" src="./images/chore-icons/laundry.png">
     <div id="task">Do The Laundry</div>
     <div id="value">$4.00</div>
   </div>
@@ -38,8 +38,23 @@
 
 <div class="columns is-mobile is-centered">
   <div id="task-card" class="column is-10">
-    <img id="task-icon" src="./images/mowing.png">
+    <img id="task-icon" src="./images/chore-icons/mowing.png">
     <div id="task">Mow The Lawn</div>
     <div id="value">$10.00</div>
   </div>
+</div>
+
+<div id="task-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p>
+      <span id="task-desc"></span>
+      <span id="task-value"></span>
+      <form>
+        <input type="checkbox" name="completed" value="completed">Mark As Complete!>
+        <button>Submit</button>
+      </form>
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
 </div>
