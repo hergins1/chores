@@ -14,6 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+
     admin: {
       type: DataTypes.BOOLEAN,
       defaultValue: true

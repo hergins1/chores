@@ -1,7 +1,14 @@
 var db = require("../models");
 const bcrypt = require("bcrypt");
 
+<<<<<<< HEAD
 module.exports = function (app) {
+=======
+const bcrypt = require('bcrypt');
+
+
+module.exports = function(app) {
+>>>>>>> a812d0a2b74fcd2a0a939a121da5288fcc6784cf
   // GET all Users
   app.get("/api/users", function (req, res) {
     db.Users.findAll({}).then(function (dbUsers) {
