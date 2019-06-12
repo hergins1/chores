@@ -3,7 +3,7 @@
 <div class="field">
   <label class="label">Display Name</label>
   <div class="control has-icons-left">
-    <input id="name-input" class="input is-rounded" type="text" placeholder="Name">
+    <input id="inputUser" class="input is-rounded" type="text" placeholder="Name">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -11,11 +11,31 @@
 </div>
 
 <div class="field">
-  <label class="label">Family Group</label>
+  <label class="label">Age</label>
   <div class="control has-icons-left">
-    <input id="family-input" class="input is-rounded" type="text" placeholder="Family">
+    <input id="inputAge" class="input is-rounded" type="text" placeholder="Age">
     <span class="icon is-small is-left">
-      <i class="fas fa-users"></i>
+      <i class="fas fa-birthday-cake"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Email</label>
+  <div class="control has-icons-left">
+    <input id="inputEmail" class="input is-rounded" type="text" placeholder="Email">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Password</label>
+  <div class="control has-icons-left">
+    <input id="inputPassword" class="input is-rounded" type="text" placeholder="Password">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
     </span>
   </div>
 </div>
@@ -24,9 +44,9 @@
   <label class="label">Access Level</label>
   <div class="control has-icons-left">
     <span class="select is-rounded">
-      <select id="user-input">        
-        <option selected>User</option>
-        <option>Admin</option>
+      <select id="inputAdmin">
+        <option selected value="0">User</option>
+        <option value="1">Admin</option>
       </select>
     </span>
     <span class="icon is-small is-left">
@@ -41,7 +61,7 @@
     <i class="fas fa-user-astronaut"></i>
     <span id="button-text">Choose Avatar</span>
   </button>
-  <input id="inputPhoto" class="input is-rounded" type="text" placeholder="Selected Avatar">
+  <input id="inputAvatar" class="input is-rounded" type="text" placeholder="Selected Avatar">
 </div>
 
 <div class="field">
@@ -65,3 +85,5 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+
+<hr id="page-end">

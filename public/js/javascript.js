@@ -153,7 +153,7 @@ $(document).on("click", "#chore-image", function(event) {
   console.log(photo);
   let input = $("#inputPhoto");
   input
-    .attr("value", '"' + photo + '"');
+    .attr("value", photo);
   $(".modal").removeClass("is-active");
 });
 
@@ -161,16 +161,55 @@ $(document).on("click", "#avatar-image", function(event) {
   event.preventDefault();
   let photo = $(this).attr("src");
   console.log(photo);
-  let input = $("#inputPhoto");
+  let input = $("#inputAvatar");
   input
-    .attr("value", '"' + photo + '"');
+    .attr("value", photo);
   $(".modal").removeClass("is-active");
 });
 
-// $(document).on("click", "#icon-submit", function(event) {
-//   event.preventDefault();
-//   const chore
-// })
+$("#icon-submit").on("click", function(event) {
+  event.preventDefault();
+  const chore = {
+    name: $("#inputName").val().trim(),
+    value: $("#inputValue").val().trim(),
+    photo: $("#inputPhoto").val().trim()
+  };
+  console.log(chore.name);
+  console.log(chore.value);
+  console.log(chore.photo);
+  $.ajax({
+    type: "POST",
+    url: "api/chores/create",
+    data: chore
+  }).then(function(result) {
+    console.log(result);
+  });
+});
+
+$("#avatar-submit").on("click", function(event) {
+  event.preventDefault();
+  const member = {
+    name: $("#inputUser").val().trim(),
+    age: $("#inputAge").val().trim(),
+    admin: $("#inputAdmin").val().trim(),
+    email: $("#inputEmail").val().trim(),
+    password: $("#inputPassword").val().trim(),
+    photo: $("#inputAvatar").val().trim()
+  };
+  console.log(member.name);
+  console.log(member.age);
+  console.log(member.admin);
+  console.log(member.email);
+  console.log(member.password);
+  console.log(member.photo);
+  $.ajax({
+    type: "POST",
+    url: "api/users/member",
+    data: member
+  }).then(function(result) {
+    console.log(result);
+  });
+});
 
 $(".modal-close").on("click", function () {
   $(".modal").removeClass("is-active");

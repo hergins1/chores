@@ -93,13 +93,17 @@ html {
   padding-bottom: 10px;
 }
 
-#chore-input,
-#value-input,
-#icon-button,
-#name-input,
-#family-input,
-#user-input,
+#inputName,
+#inputValue,
+#newchore-button,
 #icon-submit,
+#inputUser,
+#inputAge,
+#inputEmail,
+#inputPassword,
+#inputAdmin,
+#inputAvatar,
+#newavatar-button,
 #avatar-submit,
 #inputPhoto {
   border: 1px solid black;

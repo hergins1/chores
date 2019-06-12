@@ -36,12 +36,19 @@ module.exports = function(app) {
     });
   });
 
-  // CREATE new Users
-  // app.post("/api/users/create", function(req, res) {
-  //   db.Users.create(req.body).then(function(dbUsers) {
-  //     res.json(dbUsers);
-  //   });
-  // });
+  // CREATE new family member
+  app.post("/api/users/member", function(req, res) {
+    db.Users.create({
+      name: req.body.name,
+      age: req.body.age,
+      admin: req.body.admin,
+      email: req.body.email,
+      password: req.body.password,
+      photo: req.body.photo
+    }).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
 
   app.post("/api/users/create", function(req, res) {
     bcrypt.hash(req.body.password, 10, function(err, hash) {
@@ -57,6 +64,8 @@ module.exports = function(app) {
       // need to route to the user dashboard
     });
   });
+
+
 
   // UPDATE Users password
   app.put("/api/users/update/:id", function(req, res) {

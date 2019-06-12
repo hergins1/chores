@@ -50,7 +50,8 @@ module.exports = function(sequelize, DataTypes) {
   Users.associate = function(models) {
     Users.belongsTo(models.Households, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
+        defaultValue: 1
       }
     });
   };
