@@ -43,7 +43,11 @@ module.exports = function(app) {
 
   // CREATE new Chores
   app.post("/api/chores/create", function(req, res) {
-    db.Chores.create(req.body).then(function(dbChores) {
+    db.Chores.create({
+      name: req.body.inputName,
+      value: req.body.inputValue,
+      photo: req.body.inputPhoto
+    }).then(function(dbChores) {
       res.json(dbChores);
     });
   });
@@ -61,9 +65,11 @@ module.exports = function(app) {
 
   // DELETE Chores
   app.delete("/api/chores/destroy/:id", function(req, res) {
-    db.Chores.destroy({ where: { id: req.params.id } }).then(function(
-      dbChores
-    ) {
+    db.Chores.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbChores) {
       res.json(dbChores);
     });
   });

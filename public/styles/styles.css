@@ -22,6 +22,7 @@ html {
 
 #headline {
   margin-top: 10px;
+  margin-bottom: 20px;
   text-align: center;
   font-family: "Luckiest Guy", cursive;
   font-size: 36px;
@@ -73,12 +74,43 @@ html {
   font-size: 18px;
 }
 
-#task {
-  width: 200px;
+#task,
+#task-admin { 
   margin-left: 15px;
 }
 
+#task {
+  width: 200px;
+}
+
 #value {
+  font-size: 20px;
+}
+
+.field {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#chore-input,
+#value-input,
+#icon-button,
+#name-input,
+#family-input,
+#user-input,
+#submit-button {
+  border: 1px solid black;
+}
+
+#button-text {
+  margin-left: 8px;
+}
+
+#submit-button {
+  margin-top: 30px;
+  background-color: gray;
+  color: white;
   font-size: 20px;
 }
 
@@ -89,6 +121,7 @@ html {
   position: fixed;
   bottom: 0;
   margin: 0;
+  justify-content: space-around;
 }
 
 a {

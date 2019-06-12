@@ -1,3 +1,5 @@
+<h1 id="headline">Create A New User</h1>
+
 <div class="field">
   <label class="label">Display Name</label>
   <div class="control has-icons-left">
@@ -36,8 +38,30 @@
 
 <div class="field">
   <label class="label">Choose Avatar</label>
-  <button class="button is-white is-rounded" id="icon-button">
+  <button class="button is-white is-rounded" id="newAvatarButton">
     <i class="fas fa-user-astronaut"></i>
     <span id="button-text">Choose Avatar</span>
   </button>
+</div>
+
+<div class="field">
+  <button class="button is-white is-rounded" id="submit-button">
+    <i class="fas fa-check"></i>
+    <span id="button-text">Submit</span>
+  </button>
+</div>
+
+<div id="newchore-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+
+    <h1 id="headline">Available Avatars</h1>
+
+    <div class="columns is-mobile is-centered">
+      <div id="avatar-card" class="column is-6 is-centered">
+        <div id="newAvatar"></div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
 </div>

@@ -1,73 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
+  <div class="hero is-fullhight">
+    <div class="hero-head"></div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chorz Sign Up</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" href="../public/styles/sign-up.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
+    <div class="hero-body">
+      <div class="container">
+        <div class="level" id="top-bar">
+          <div class="level-right">
+            <img src="./images/logo.png" alt="CHORZ">
+          </div>
 
-<body>
-  <div class="container">
-    <div class="hero is-fullhight">
-      <div class="hero-head"></div>
+          <div class="level-left">
+            <h1 class="title">Sign Up</h1>
+          </div>
+        </div>
 
-      <div class="hero-body">
-        <div class="container">
-          <div class="level" id="top-bar">
-            <div class="level-right">
-              <h1 class="title">Sign Up</h1>
-            </div>
+        <div class="level">
+          <div class="level-item">
+            <ul>
+              <div class="level">
+                <div class="level-item">
+                  <input type="text" class="input is-medium is-rounded" placeholder="First Name" id="userName">
+                </div>
+              </div>
 
-            <div class="level-left">
-              <img src="" alt="CHORZ">
+
+              <div class="level">
+                <div class="level-item">
+                  <input type="text" class="input is-medium is-rounded" placeholder="Last Name" id="houseName">
+                </div>
+              </div>
+          </div>
+
+          <div class="level">
+            <div class="level-item">
+              <input type="number" class="input is-medium is-rounded" placeholder="Age" id="age">
             </div>
           </div>
 
           <div class="level">
             <div class="level-item">
-              <ul>
-                <div class="level">
-                  <div class="level-item">
-                    <input type="text" class="input is-medium is-rounded" placeholder="First Name">
-                  </div>
-                </div>
-
-                <div class="level">
-                  <div class="level-item">
-                    <input type="text" class="input is-medium is-rounded" placeholder="Last Name">
-                  </div>
-                </div>
-
-                <div class="level">
-                  <div class="level-item">
-                    <input type="email" class="input is-medium is-rounded" placeholder="Email">
-                  </div>
-                </div>
-
-                <div class="level">
-                  <div class="level-item">
-                    <input type="password" class="input is-medium is-rounded" placeholder="Password">
-                  </div>
-                </div>
-
-                <div class="level">
-                  <div class="level-left">
-                    <button class="button">Submit</button>
-                  </div>
-                </div>
-              </ul>
+              <input type="email" class="input is-medium is-rounded" placeholder="Email" id="email">
             </div>
           </div>
         </div>
-      </div>
-      <div class="hero-foot"></div>
 
+        <div class="level">
+          <div class="level-item">
+            <input type="password" class="input is-medium is-rounded" placeholder="Password" id="password">
+          </div>
+        </div>
+
+        <div class="level">
+          <div class="level-left">
+            <button class="button" id="submitBttn">Submit</button>
+          </div>
+        </div>
+        </ul>
+      </div>
     </div>
   </div>
-</body>
-
-</html>
+</div>

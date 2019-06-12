@@ -1,6 +1,8 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+const bcrypt = require("bcrypt");
+
 
 var db = require("./models");
 
@@ -27,7 +29,7 @@ require("./routes/householdsApiRoutes")(app);
 require("./routes/usersApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
