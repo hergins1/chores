@@ -77,12 +77,44 @@ const icons = [
     name: "wiping",
     photo: "./images/chore-icons/wiping.png"
   },
-]
+  {
+    name: "iron",
+    photo: "./images/chore-icons/iron.png"
+  }
+];
 
 const avatars = [
   {
+    name: "Byron",
+    photo: "./images/avatars/byron.png"
+  },
+  {
+    name: "Halle",
+    photo: "./images/avatars/halle.png"
+  },
+  {
+    name: "Shaun",
+    photo: "./images/avatars/shaun.png"
+  },
+  {
+    name: "Jessica",
+    photo: "./images/avatars/jessica.png"
+  },
+  {
+    name: "Tim",
+    photo: "./images/avatars/tim.png"
+  },
+  {
+    name: "Sari",
+    photo: "./images/avatars/sari.png"
+  },
+  {
     name: "Erik",
     photo: "./images/avatars/erik.png"
+  },
+  {
+    name: "Natalie",
+    photo: "./images/avatars/natalie.png"
   },
   {
     name: "Jonathan",
@@ -96,24 +128,49 @@ const avatars = [
     name: "Josh",
     photo: "./images/avatars/josh.png"
   },
-]
+];
 
 $(document).on("click", "#task-card", function (event) {
   event.preventDefault();
   $(".modal").addClass("is-active");
 });
 
-$(document).on("click", "#newchore-icon", function (event) {
+$(document).on("click", "#newchore-button", function (event) {
   event.preventDefault();
-  $(".modal").addClass("is-active");  
+  $(".modal").addClass("is-active");
   modalChore();
 });
 
-$(document).on("click", "#newAvatarButton", function (event) {
+$(document).on("click", "#newavatar-button", function (event) {
   event.preventDefault();
-  $(".modal").addClass("is-active");  
+  $(".modal").addClass("is-active");
   modalAvatar();
 });
+
+$(document).on("click", "#chore-image", function(event) {
+  event.preventDefault();
+  let photo = $(this).attr("src");
+  console.log(photo);
+  let input = $("#inputPhoto");
+  input
+    .attr("value", '"' + photo + '"');
+  $(".modal").removeClass("is-active");
+});
+
+$(document).on("click", "#avatar-image", function(event) {
+  event.preventDefault();
+  let photo = $(this).attr("src");
+  console.log(photo);
+  let input = $("#inputPhoto");
+  input
+    .attr("value", '"' + photo + '"');
+  $(".modal").removeClass("is-active");
+});
+
+// $(document).on("click", "#icon-submit", function(event) {
+//   event.preventDefault();
+//   const chore
+// })
 
 $(".modal-close").on("click", function () {
   $(".modal").removeClass("is-active");
@@ -124,7 +181,8 @@ function modalChore() {
   for (let i = 0; i < icons.length; i++) {
     const iconCard = $("<img>");
     iconCard
-      .attr("src", icons[i].photo);
+      .attr("src", icons[i].photo)
+      .attr("id", "chore-image");
     $("#newChoreIcon").append(iconCard);
   }
 };
@@ -134,7 +192,8 @@ function modalAvatar() {
   for (let i = 0; i < avatars.length; i++) {
     const iconCard = $("<img>");
     iconCard
-      .attr("src", avatars[i].photo);
+      .attr("src", avatars[i].photo)
+      .attr("id", "avatar-image");
     $("#newAvatar").append(iconCard);
   }
 };

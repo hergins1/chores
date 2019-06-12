@@ -21,13 +21,12 @@
 </div>
 
 <div class="field">
-  <label class="label">Admin</label>
+  <label class="label">Access Level</label>
   <div class="control has-icons-left">
     <span class="select is-rounded">
-      <select id="user-input">
-        <option selected>Acess Level</option>
+      <select id="user-input">        
+        <option selected>User</option>
         <option>Admin</option>
-        <option>User</option>
       </select>
     </span>
     <span class="icon is-small is-left">
@@ -38,14 +37,15 @@
 
 <div class="field">
   <label class="label">Choose Avatar</label>
-  <button class="button is-white is-rounded" id="newAvatarButton">
+  <button class="button is-white is-rounded" id="newavatar-button">
     <i class="fas fa-user-astronaut"></i>
     <span id="button-text">Choose Avatar</span>
   </button>
+  <input id="inputPhoto" class="input is-rounded" type="text" placeholder="Selected Avatar">
 </div>
 
 <div class="field">
-  <button class="button is-white is-rounded" id="submit-button">
+  <button class="button is-white is-rounded" id="avatar-submit">
     <i class="fas fa-check"></i>
     <span id="button-text">Submit</span>
   </button>
@@ -55,7 +55,7 @@
   <div class="modal-background"></div>
   <div class="modal-content">
 
-    <h1 id="headline">Available Avatars</h1>
+    <h1 id="headline">Choose Your Avatar!</h1>
 
     <div class="columns is-mobile is-centered">
       <div id="avatar-card" class="column is-6 is-centered">
