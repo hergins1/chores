@@ -118,23 +118,3 @@ $(document).on("click", "#newAvatarButton", function (event) {
 $(".modal-close").on("click", function () {
   $(".modal").removeClass("is-active");
 });
-
-function modalChore() {
-  $("#newChoreIcon").empty();
-  for (let i = 0; i < icons.length; i++) {
-    const iconCard = $("<img>");
-    iconCard
-      .attr("src", icons[i].photo);
-    $("#newChoreIcon").append(iconCard);
-  }
-};
-
-function modalAvatar() {
-  $("#newAvatar").empty();
-  for (let i = 0; i < avatars.length; i++) {
-    const iconCard = $("<img>");
-    iconCard
-      .attr("src", avatars[i].photo);
-    $("#newAvatar").append(iconCard);
-  }
-};
