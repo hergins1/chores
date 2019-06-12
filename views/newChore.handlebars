@@ -22,7 +22,7 @@
 
 <div class="field">
   <label class="label">Choose Icon</label>
-  <button class="button is-white is-rounded" id="icon-button">
+  <button class="button is-white is-rounded" id="newchore-icon">
     <i class="far fa-image"></i>
     <span id="button-text">Choose Icon</span>
   </button>
@@ -35,17 +35,17 @@
   </button>
 </div>
 
-<div id="task-modal" class="modal">
+<div id="newchore-modal" class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
-    <p>
-      <span id="task-desc"></span>
-      <span id="task-value"></span>
-      <form>
-        <input type="checkbox" name="completed" value="completed">Mark As Complete!>
-        <button>Submit</button>
-      </form>
-    </p>
+
+    <h1 id="headline">Available Icons</h1>
+
+    <div class="columns is-mobile is-centered">
+      <div id="icon-card" class="column is-8">
+        <div id="newChoreIcon"></div>
+      </div>
+    </div>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>

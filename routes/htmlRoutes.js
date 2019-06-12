@@ -4,12 +4,12 @@ var db = require("../models");
 module.exports = function(app) {
   // LOGIN PAGE: WORKING
   app.get("/", function(req, res) {
-    res.render("login", {layout: "access.handlebars"});
+    res.render("login", { layout: "access.handlebars" });
   });
 
   // SIGNUP PAGE: WORKING
   app.get("/signup", function(req, res) {
-    res.render("signup", {layout: "access.handlebars"});
+    res.render("signup", { layout: "access.handlebars" });
   });
 
   // NEW USER PAGE: WORKING
@@ -37,6 +37,28 @@ module.exports = function(app) {
       res.render("family", {
         Users: dbUsers
       });
+    });
+  });
+
+  // USER LOGIN
+  app.post("/user/login", function(req, res) {
+    // console.log(req.body);
+    db.Users.findOne({
+      where: { email: req.body.email }
+    }).then(function(dbUsers) {
+      // res.json(dbUsers);
+      if (dbUsers.password === req.body.password) {
+        console.log("PASSWORD MATCH!");
+        if (dbUsers.admin) {
+          console.log("ADMIN");
+          // res.render("indexadmin");
+          res.redirect("/admin");
+        } else {
+          res.redirect("/user");
+        }
+      } else {
+        res.status(400).end();
+      }
     });
   });
 

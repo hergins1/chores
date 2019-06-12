@@ -4,35 +4,35 @@ $(document).ready(function () {
     return false;
   });
 
-  $("#logInBttn").on("click", function () {
-    event.preventDefault();
+  // $("#logInBttn").on("click", function () {
+  //   event.preventDefault();
 
-    var loginInfo = {
-      email: $("#logInEmail")
-        .val()
-        .trim(),
-      password: $("#logInPassword")
-        .val()
-        .trim()
-    };
-    console.log(loginInfo);
+  //   var loginInfo = {
+  //     email: $("#logInEmail")
+  //       .val()
+  //       .trim(),
+  //     password: $("#logInPassword")
+  //       .val()
+  //       .trim()
+  //   };
+    // console.log(loginInfo);
 
-    $.ajax({
-      type: "POST",
-      url: "/api/user/login",
-      data: loginInfo
-    }).then(function (result) {
-      console.log(result);
-      if (loginInfo.email && loginInfo.password) {
-        console.log("MATCH!");
-        // if (admin) {
-        //   window.location.href = "./views/indexadmin.handlebars";
-        // } else {
-        //   window.location.href = "./views/indexuser.handlebars";
-        // }
+    // $.ajax({
+    //   type: "POST",
+    //   url: "/user/login",
+    //   data: loginInfo
+    // }).then(function (result) {
+    //   console.log(result);
+    //   if (loginInfo.email && loginInfo.password) {
+    //     console.log("MATCH!");
+    //     // if (admin) {
+    //     //   window.location.href = "./views/indexadmin.handlebars";
+    //     // } else {
+    //     //   window.location.href = "./views/indexuser.handlebars";
+    //     // }
 
-        // return false;
-      }
-    });
-  });
+    //     // return false;
+    //   }
+    // });
+  // });
 });
