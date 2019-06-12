@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#signUpBttn").click(function () {
-    window.location.href = "./views/signup.handlebars";
+    window.location.href = "./signup";
     return false;
   });
 
