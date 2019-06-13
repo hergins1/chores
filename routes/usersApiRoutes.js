@@ -10,24 +10,13 @@ module.exports = function (app) {
     });
   });
 
-<<<<<<< HEAD
-  // CREATE new Users
-  app.post("/api/users", function(req, res) {
-    console.log(req.body);
-    db.Users.create(req.body).then(function(dbUsers) {
-=======
   // GET all Users in Household
   app.get("/api/users/:id", function (req, res) {
     db.Users.findAll({
       where: {
         HouseholdId: req.params.HouseholdId
       }
-<<<<<<< HEAD
-    }).then(function(dbUsers) {
->>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
-=======
     }).then(function (dbUsers) {
->>>>>>> e8f09724ef7c3a504049b6fc10d9b677cf413b03
       res.json(dbUsers);
     });
   });
