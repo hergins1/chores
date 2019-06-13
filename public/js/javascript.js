@@ -155,6 +155,11 @@ $(document).on("click", "#newavatar-button", function (event) {
   modalAvatar();
 });
 
+$(document).on("click", "#hamburger", function(event) {
+  event.preventDefault();
+  $(".navbar-menu").toggleClass("is-active");
+});
+
 $(document).on("click", "#chore-image", function(event) {
   event.preventDefault();
   let photo = $(this).attr("src");
@@ -244,3 +249,4 @@ function modalAvatar() {
     $("#newAvatar").append(iconCard);
   }
 };
+
