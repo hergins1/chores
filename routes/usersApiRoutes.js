@@ -80,4 +80,14 @@ module.exports = function(app) {
       res.json(dbUsers);
     });
   });
+  
+  
+  app.put("/api/user/chore/assign", function(req, res) {
+    db.Chores.update(
+      {UserId: req.body.UserId},
+      {where: { id: req.body.choreId}
+		}).then(function(dbChores){
+      console.log(dbChores)
+    });    
+  }); 
 };
