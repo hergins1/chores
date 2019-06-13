@@ -1,7 +1,6 @@
 <h1 id="headline">My Dashboard</h1>
 
 {{#each User}}
-{{#if isLoggedIn}}
 <div class="columns is-mobile">
   <div class="column is-half">
     <img id="profile-pic" src="{{ photo }}" alt="Profile Pic">
@@ -13,8 +12,7 @@
     </ul>
   </div>
 </div>
-{{#if}}
-{{#each}}
+{{/each}}
 
 
 <div class="columns is-mobile is-centered">
