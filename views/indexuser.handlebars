@@ -1,15 +1,13 @@
 <h1 id="headline">My Dashboard</h1>
 
-
-
 <div class="columns is-mobile">
   <div class="column is-half">
-    <img id="profile-pic" src="./images/avatars/josh.png" alt="Profile Pic">
+    <img id="profile-pic" src={{ Users.photo }} alt="Profile Pic">
   </div>
   <div id="profile-info" class="column">
     <ul class="list-unstyled">
-      <li>Josh Bradley</li>
-      <li>Balance: $40.00</li>
+      <li>{{ Users.name }}</li>
+      <li>${{ Users.balance }}</li>
     </ul>
   </div>
 </div>
@@ -49,14 +47,9 @@
 <div id="task-modal" class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
-    <p>
-      <span id="task-desc"></span>
-      <span id="task-value"></span>
-      <form>
-        <input type="checkbox" name="completed" value="completed">Mark As Complete!>
-        <button>Submit</button>
-      </form>
-    </p>
+    <div class="has-text-centered">
+      <button class="button is-rounded is-success" id="mark-complete"><i class="fas fa-check"></i><span id="complete-text">Complete!</span></button>
+    </div>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>

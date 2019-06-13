@@ -93,6 +93,10 @@ html {
   padding-bottom: 10px;
 }
 
+#complete-text {
+  margin-left: 10px;
+}
+
 #inputName,
 #inputValue,
 #newchore-button,

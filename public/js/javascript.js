@@ -1,5 +1,3 @@
-// import { ENETDOWN } from "constants";
-
 const icons = [
   {
     name: "bathroom",
@@ -179,6 +177,16 @@ $(document).on("click", "#avatar-image", function(event) {
     .attr("value", photo);
   $(".modal").removeClass("is-active");
 });
+
+// $("#home-button").on("click", function(event) {
+//   event.preventDefault();
+//   $.ajax({
+//     type: "GET",
+//     url: "/user/homepage"
+//   }).then(function(result){
+//     console.log(result);
+//   });
+// });
 
 $("#icon-submit").on("click", function(event) {
   event.preventDefault();

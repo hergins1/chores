@@ -1,18 +1,16 @@
 <h1 id="headline">My Dashboard</h1>
 
-{{#each User}}
 <div class="columns is-mobile">
   <div class="column is-half">
-    <img id="profile-pic" src="{{ photo }}" alt="Profile Pic">
+    <img id="profile-pic" src="{{ Users.photo }}" alt="Profile Pic">
   </div>
   <div id="profile-info" class="column">
     <ul class="list-unstyled">
-      <li>{{ name }}</li>
+      <li>{{ Users.name }}</li>
       <li>Admin</li>
     </ul>
   </div>
 </div>
-{{/each}}
 
 
 <div class="columns is-mobile is-centered">

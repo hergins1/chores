@@ -1,30 +1,30 @@
 var db = require("../models");
 // const bcrypt = require("bcrypt");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // LOGIN PAGE: WORKING
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     res.render("login", { layout: "access.handlebars" });
   });
 
   // SIGNUP PAGE: WORKING
-  app.get("/signup", function(req, res) {
+  app.get("/signup", function (req, res) {
     res.render("signup", { layout: "access.handlebars" });
   });
 
   // NEW USER PAGE: WORKING
-  app.get("/new-user", function(req, res) {
+  app.get("/new-user", function (req, res) {
     res.render("newUser");
   });
 
   // NEW CHORE PAGE: WORKING
-  app.get("/new-chore", function(req, res) {
+  app.get("/new-chore", function (req, res) {
     res.render("newChore");
   });
 
   // CHORES LIST PAGE: WORKING
-  app.get("/chores-list", function(req, res) {
-    db.Chores.findAll({}).then(function(dbChores) {
+  app.get("/chores-list", function (req, res) {
+    db.Chores.findAll({}).then(function (dbChores) {
       res.render("chores-list", {
         Chores: dbChores
       });
@@ -43,8 +43,8 @@ module.exports = function(app) {
   // });
 
   // FAMILY LIST PAGE: WORKING
-  app.get("/family", function(req, res) {
-    db.Users.findAll({}).then(function(dbUsers) {
+  app.get("/family", function (req, res) {
+    db.Users.findAll({}).then(function (dbUsers) {
       res.render("family", {
         Users: dbUsers
       });
@@ -52,10 +52,10 @@ module.exports = function(app) {
   });
 
   // USER LOGIN
-  app.post("/user/login", function(req, res) {
+  app.post("/user/login", function (req, res) {
     db.Users.findOne({
       where: { email: req.body.email }
-    }).then(function(dbUsers) {
+    }).then(function (dbUsers) {
       // res.json(dbUsers);
       if (dbUsers.password === req.body.password) {
         req.session.email = req.body.email;
@@ -75,10 +75,10 @@ module.exports = function(app) {
   });
 
   // ADMIN VIEW: WORKING
-  app.get("/admin", function(req, res) {
+  app.get("/admin", function (req, res) {
     db.Users.findOne({
       where: { email: req.session.email }
-    }).then(function(dbUsers) {
+    }).then(function (dbUsers) {
       console.log("SESSION INFORMATION: ", req.session);
       console.log("DATABASE INFORMATION: ", dbUsers.name);
       res.render("indexadmin", {
@@ -98,10 +98,10 @@ module.exports = function(app) {
   // });
 
   // USER VIEW: WORKING
-  app.get("/user", function(req, res) {
+  app.get("/user", function (req, res) {
     db.Users.findOne({
       where: { email: req.session.email }
-    }).then(function(dbUsers) {
+    }).then(function (dbUsers) {
       console.log("SESSION INFORMATION: ", req.session);
       console.log("DATABASE INFORMATION: ", dbUsers.name);
       res.render("indexuser", {
@@ -111,7 +111,7 @@ module.exports = function(app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
