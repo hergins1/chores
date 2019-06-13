@@ -7,10 +7,10 @@ VALUES
 
 INSERT INTO Users (name, age, admin, email, password, balance, photo, createdAt, updatedAt, HouseholdId) 
 VALUES 
-("Erik", 28, 1, "ehergins", "ehergins", 0, "./images/avatars/erik.png", CURDATE(), CURDATE(), 2),
-("Jason", 26, 0, "jmoore", "jmoore", 20, "./images/avatars/jason.png", CURDATE(), CURDATE(), 1),
-("Jonathan", 26, 1, "jorlowski", "jorlowski", 0, "./images/avatars/jonathan.png", CURDATE(), CURDATE(), 2),
-("Josh", 39, 0, "jbradley", "jbradley", 10, "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
+("Erik", 28, 1, "ehergins@gmail.com", "ehergins", 0, "./images/avatars/erik.png", CURDATE(), CURDATE(), 2),
+("Jason", 26, 0, "jmoore@gmail.com", "jmoore", 20, "./images/avatars/jason.png", CURDATE(), CURDATE(), 1),
+("Jonathan", 26, 1, "jorlowski@gmail.com", "jorlowski", 0, "./images/avatars/jonathan.png", CURDATE(), CURDATE(), 2),
+("Josh", 39, 0, "jbradley@gmail.com", "jbradley", 10, "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
 
 INSERT INTO Chores (name, value, due, photo, completed, createdAt, updatedAt, UserId) 
 VALUES 
