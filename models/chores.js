@@ -15,8 +15,9 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     due: {
-      type: DataTypes.DATEONLY,
-      allowNull: false
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW
     },
     photo: {
       type: DataTypes.STRING,
@@ -34,7 +35,8 @@ module.exports = function (sequelize, DataTypes) {
   Chores.associate = function (models) {
     Chores.belongsTo(models.Users, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
+        defaultValue: 1
       }
     });
   };
