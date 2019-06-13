@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="tile is-ancestor" id="ancestor2">
+  <div class="tile is-ancestor">
     <div class="tile is-6 is-parent">
       <div class="tile is-child box" id="child-box">
         <div class="level">
@@ -16,18 +16,22 @@
           </div>
         </div>
         <div class="level">
-          <ul>
+          
+          {{!-- <ul> --}}
+            <form action="/user/login" method="POST">
             <div class="level">
-              <input type="email" class="input is-medium is-rounded" placeholder="Email" id="logInEmail">
+              <input type="email" class="input is-medium is-rounded" placeholder="Email" id="logInEmail" name="email">
             </div>
             <div class="level">
-              <input type="password" class="input is-medium is-rounded" placeholder="Password" id="logInPassword">
+              <input type="password" class="input is-medium is-rounded" placeholder="Password" id="logInPassword" name="password">
             </div>
-          </ul>
-          <div class="level">
-            <button class="button" id="logInBttn">Log In</button>
-            <p id="wrongPW"></p>
-          </div>
+            <div class="level">
+              <button class="button" id="logInBttn" type="submit">Log In</button>
+              <p id="wrongPW"></p>
+            </div>
+          {{!-- </ul> --}}
+          </form>
+
         </div>
       </div>
     </div>
@@ -36,7 +40,7 @@
       <div class="tile is-child box" id="child-box">
         <p class="title">Don't have an account? Sign up today!</p>
         <br>
-        <button class="button" id="signUpBttn"><a href="/signup" id="signUpLink">Sign Up</button>
+        <button class="button" id="signUpBttn"><a href="/signup">Sign Up</button>
       </div>
     </div>
   </div>
