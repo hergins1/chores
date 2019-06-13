@@ -8,6 +8,7 @@ VALUES
 INSERT INTO Users (name, age, admin, email, password, balance, photo, createdAt, updatedAt, HouseholdId) 
 VALUES 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ("Erik", 28, 1, "ehergins", "ehergins", ".images/avatars/erik.png", CURDATE(), CURDATE(), 1),
 ("Jason", 26, 0, "jmoore", "jmoore", ".images/avatars/jason.png", CURDATE(), CURDATE(), 1),
 ("Jonathan", 26, 1, "jorlowski", "jorlowski", ".images/avatars/jonathan.png", CURDATE(), CURDATE(), 1),
@@ -18,6 +19,12 @@ VALUES
 ("Jonathan", 26, 1, "jorlowski", "jorlowski", 0, "./images/avatars/jonathan.png", CURDATE(), CURDATE(), 2),
 ("Josh", 39, 0, "jbradley", "jbradley", 10, "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
 >>>>>>> 69086498af644fbc5dc49f175d7c4d5ee166b843
+=======
+("Erik", 28, 1, "ehergins@gmail.com", "ehergins", 0, "./images/avatars/erik.png", CURDATE(), CURDATE(), 2),
+("Jason", 26, 0, "jmoore@gmail.com", "jmoore", 20, "./images/avatars/jason.png", CURDATE(), CURDATE(), 1),
+("Jonathan", 26, 1, "jorlowski@gmail.com", "jorlowski", 0, "./images/avatars/jonathan.png", CURDATE(), CURDATE(), 2),
+("Josh", 39, 0, "jbradley@gmail.com", "jbradley", 10, "./images/avatars/josh.png", CURDATE(), CURDATE(), 1);
+>>>>>>> e9ae8466a179da4ca60b1fdfc19c6b401bcfa9e1
 
 <<<<<<< HEAD
 INSERT INTO Chores (name, value, due, completed, createdAt, updatedAt, UserId) VALUES ("Clean room", 5, "2019-06-30", 0, CURDATE(), CURDATE(), 1);

@@ -22,14 +22,15 @@
 
 <div class="field">
   <label class="label">Choose Icon</label>
-  <button class="button is-white is-rounded" id="newchore-icon">
+  <button class="button is-white is-rounded" id="newchore-button">
     <i class="far fa-image"></i>
     <span id="button-text">Choose Icon</span>
   </button>
+  <input id="inputPhoto" class="input is-rounded" type="text" placeholder="Selected Icon">
 </div>
 
 <div class="field">
-  <button class="button is-white is-rounded" id="submit-button">
+  <button class="button is-white is-rounded" id="icon-submit">
     <i class="fas fa-check"></i>
     <span id="button-text">Submit</span>
   </button>
@@ -39,10 +40,10 @@
   <div class="modal-background"></div>
   <div class="modal-content">
 
-    <h1 id="headline">Available Icons</h1>
+    <h1 id="headline">Choose Your Icon!</h1>
 
     <div class="columns is-mobile is-centered">
-      <div id="icon-card" class="column is-8">
+      <div id="icon-card" class="column is-10 has-text-centered">
         <div id="newChoreIcon"></div>
       </div>
     </div>

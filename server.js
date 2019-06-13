@@ -10,6 +10,8 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 >>>>>>> e8f09724ef7c3a504049b6fc10d9b677cf413b03
 const bcrypt = require("bcrypt");
+const session = require('express-session')
+
 
 >>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
 
@@ -22,7 +24,13 @@ let PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+<<<<<<< HEAD
 // app.use(bodyParser.json());
+=======
+app.use(session({
+  secret: "32lkj3iii4jj4i208as"
+}));
+>>>>>>> e9ae8466a179da4ca60b1fdfc19c6b401bcfa9e1
 
 // Handlebars
 app.engine(
@@ -48,8 +56,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,

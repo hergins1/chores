@@ -1,16 +1,19 @@
 <h1 id="headline">My Dashboard</h1>
 
+
+{{#each Users}}
 <div class="columns is-mobile">
   <div class="column is-half">
     <img id="profile-pic" src="./images/avatars/josh.png" alt="Profile Pic">
   </div>
   <div id="profile-info" class="column">
     <ul class="list-unstyled">
-      <li>Josh Bradley</li>
-      <li>Balance: $40.00</li>
+      <li>{{ name }}</li>
+      <li>Balance: ${{ balance }}</li>
     </ul>
   </div>
 </div>
+{{/each}}
 
 <div class="columns is-mobile is-centered">
   <div id="task-card" class="column is-10">
@@ -58,3 +61,5 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+
+<hr id="page-end">

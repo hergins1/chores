@@ -93,13 +93,19 @@ html {
   padding-bottom: 10px;
 }
 
-#chore-input,
-#value-input,
-#icon-button,
-#name-input,
-#family-input,
-#user-input,
-#submit-button {
+#inputName,
+#inputValue,
+#newchore-button,
+#icon-submit,
+#inputUser,
+#inputAge,
+#inputEmail,
+#inputPassword,
+#inputAdmin,
+#inputAvatar,
+#newavatar-button,
+#avatar-submit,
+#inputPhoto {
   border: 1px solid black;
 }
 
@@ -107,11 +113,29 @@ html {
   margin-left: 8px;
 }
 
-#submit-button {
-  margin-top: 30px;
+#newchore-button,
+#newavatar-button {
+  margin-bottom: 10px;
+}
+
+#icon-submit,
+#avatar-submit {
+  margin-top: 20px;
   background-color: gray;
   color: white;
   font-size: 20px;
+}
+
+#icon-card {
+  justify-content: center;
+}
+
+#chore-image {
+  margin: 5px 10px;
+}
+
+#avatar-image {
+  margin-bottom: 10px;
 }
 
 #footer-icons {
