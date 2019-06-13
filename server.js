@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const session = require('express-session')
 
 
