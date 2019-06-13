@@ -78,6 +78,22 @@ const icons = [
   {
     name: "iron",
     photo: "./images/chore-icons/iron.png"
+  },
+  {
+    name: "TV",
+    photo: "./images/chore-icons/TV.png"
+  },
+  {
+    name: "sleep",
+    photo: "./images/chore-icons/sleep.png"
+  },
+  {
+    name: "junk-food",
+    photo: "./images/chore-icons/junk-food.png"
+  },
+  {
+    name: "play",
+    photo: "./images/chore-icons/play.png"
   }
 ];
 
