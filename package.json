@@ -11,16 +11,9 @@
   },
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "body-parser": "^1.19.0",
-=======
     "bcrypt": "^3.0.6",
-<<<<<<< HEAD
->>>>>>> 5f82a882eaed100efc40ed9e0ed2bbac0e2ec4ee
-    "dotenv": "^6.0.0",
-=======
     "dotenv": "^6.2.0",
->>>>>>> 69086498af644fbc5dc49f175d7c4d5ee166b843
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.16.2",
