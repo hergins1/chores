@@ -3,7 +3,7 @@
 <div class="field">
   <label class="label">Display Name</label>
   <div class="control has-icons-left">
-    <input id="name-input" class="input is-rounded" type="text" placeholder="Name">
+    <input id="inputUser" class="input is-rounded" type="text" placeholder="Name">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -11,23 +11,42 @@
 </div>
 
 <div class="field">
-  <label class="label">Family Group</label>
+  <label class="label">Age</label>
   <div class="control has-icons-left">
-    <input id="family-input" class="input is-rounded" type="text" placeholder="Family">
+    <input id="inputAge" class="input is-rounded" type="text" placeholder="Age">
     <span class="icon is-small is-left">
-      <i class="fas fa-users"></i>
+      <i class="fas fa-birthday-cake"></i>
     </span>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Admin</label>
+  <label class="label">Email</label>
+  <div class="control has-icons-left">
+    <input id="inputEmail" class="input is-rounded" type="text" placeholder="Email">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Password</label>
+  <div class="control has-icons-left">
+    <input id="inputPassword" class="input is-rounded" type="text" placeholder="Password">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Access Level</label>
   <div class="control has-icons-left">
     <span class="select is-rounded">
-      <select id="user-input">
-        <option selected>Acess Level</option>
-        <option>Admin</option>
-        <option>User</option>
+      <select id="inputAdmin">
+        <option selected value="0">User</option>
+        <option value="1">Admin</option>
       </select>
     </span>
     <span class="icon is-small is-left">
@@ -38,14 +57,15 @@
 
 <div class="field">
   <label class="label">Choose Avatar</label>
-  <button class="button is-white is-rounded" id="newAvatarButton">
+  <button class="button is-white is-rounded" id="newavatar-button">
     <i class="fas fa-user-astronaut"></i>
     <span id="button-text">Choose Avatar</span>
   </button>
+  <input id="inputAvatar" class="input is-rounded" type="text" placeholder="Selected Avatar">
 </div>
 
 <div class="field">
-  <button class="button is-white is-rounded" id="submit-button">
+  <button class="button is-white is-rounded" id="avatar-submit">
     <i class="fas fa-check"></i>
     <span id="button-text">Submit</span>
   </button>
@@ -55,7 +75,7 @@
   <div class="modal-background"></div>
   <div class="modal-content">
 
-    <h1 id="headline">Available Avatars</h1>
+    <h1 id="headline">Choose Your Avatar!</h1>
 
     <div class="columns is-mobile is-centered">
       <div id="avatar-card" class="column is-6 is-centered">
@@ -65,3 +85,5 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+
+<hr id="page-end">
