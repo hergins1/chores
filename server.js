@@ -33,7 +33,7 @@ require("./routes/householdsApiRoutes")(app);
 require("./routes/usersApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
