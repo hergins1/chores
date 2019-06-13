@@ -194,16 +194,6 @@ $(document).on("click", "#avatar-image", function(event) {
   $(".modal").removeClass("is-active");
 });
 
-// $("#home-button").on("click", function(event) {
-//   event.preventDefault();
-//   $.ajax({
-//     type: "GET",
-//     url: "/user/homepage"
-//   }).then(function(result){
-//     console.log(result);
-//   });
-// });
-
 $("#icon-submit").on("click", function(event) {
   event.preventDefault();
   const chore = {
