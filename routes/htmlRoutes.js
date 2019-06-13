@@ -80,7 +80,7 @@ module.exports = function(app) {
       where: { email: req.session.email }
     }).then(function(dbUsers) {
       console.log("SESSION INFORMATION: ", req.session);
-      console.log("DATABASE INFORMATION: ", dbUsers.name);
+      // console.log("DATABASE INFORMATION: ", dbUsers);
       res.render("indexadmin", {
         Users: dbUsers
       });
