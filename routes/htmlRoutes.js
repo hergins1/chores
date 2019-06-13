@@ -110,6 +110,25 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/homepage", function(req, res) {
+    db.Users.findOne({
+      where: { email: req.session.email }
+    }).then(function(dbUsers) {
+      console.log("SESSION INFORMATION: ", req.session);
+      console.log("DATABASE INFORMATION: ", dbUsers.name);
+      if (dbUsers.admin) {
+        res.render("indexadmin", {
+          Users: dbUsers
+        });
+      } else {
+        res.render("indexuser", {
+          Users: dbUsers
+        });
+      }
+    });
+  });
+  // });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

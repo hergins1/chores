@@ -1,5 +1,3 @@
-// import { ENETDOWN } from "constants";
-
 const icons = [
   {
     name: "bathroom",
@@ -80,6 +78,22 @@ const icons = [
   {
     name: "iron",
     photo: "./images/chore-icons/iron.png"
+  },
+  {
+    name: "TV",
+    photo: "./images/chore-icons/TV.png"
+  },
+  {
+    name: "sleep",
+    photo: "./images/chore-icons/sleep.png"
+  },
+  {
+    name: "junk-food",
+    photo: "./images/chore-icons/junk-food.png"
+  },
+  {
+    name: "play",
+    photo: "./images/chore-icons/play.png"
   }
 ];
 
@@ -179,6 +193,16 @@ $(document).on("click", "#avatar-image", function(event) {
     .attr("value", photo);
   $(".modal").removeClass("is-active");
 });
+
+// $("#home-button").on("click", function(event) {
+//   event.preventDefault();
+//   $.ajax({
+//     type: "GET",
+//     url: "/user/homepage"
+//   }).then(function(result){
+//     console.log(result);
+//   });
+// });
 
 $("#icon-submit").on("click", function(event) {
   event.preventDefault();

@@ -10,6 +10,7 @@ module.exports = function (sequelize, DataTypes) {
     value: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
+      defaultValue: 0,
       validate: {
         len: [1]
       }
