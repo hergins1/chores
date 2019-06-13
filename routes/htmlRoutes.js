@@ -79,8 +79,8 @@ module.exports = function(app) {
     db.Users.findOne({
       where: { email: req.session.email }
     }).then(function(dbUsers) {
-      // console.log(req.session);
-      console.log(dbUsers.name);
+      console.log("SESSION INFORMATION: ", req.session);
+      console.log("DATABASE INFORMATION: ", dbUsers.name);
       res.render("indexadmin", {
         Users: dbUsers
       });
@@ -99,7 +99,15 @@ module.exports = function(app) {
 
   // USER VIEW: WORKING
   app.get("/user", function(req, res) {
-    res.render("indexuser");
+    db.Users.findOne({
+      where: { email: req.session.email }
+    }).then(function(dbUsers) {
+      console.log("SESSION INFORMATION: ", req.session);
+      console.log("DATABASE INFORMATION: ", dbUsers.name);
+      res.render("indexuser", {
+        Users: dbUsers
+      });
+    });
   });
 
   // Render 404 page for any unmatched routes
