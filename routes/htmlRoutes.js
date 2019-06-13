@@ -43,10 +43,11 @@ module.exports = function(app) {
   // USER LOGIN
   app.post("/user/login", function(req, res) {
     // console.log(req.body);
+    console.log(req.session);
     db.Users.findOne({
       where: { email: req.body.email }
     }).then(function(dbUsers) {
-      // res.json(dbUsers);
+      res.json(dbUsers);
       if (dbUsers.password === req.body.password) {
         console.log("PASSWORD MATCH!");
         if (dbUsers.admin) {

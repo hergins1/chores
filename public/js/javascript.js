@@ -222,8 +222,6 @@ $("#avatar-submit").on("click", function(event) {
 $(".modal-close").on("click", function () {
   $(".modal").removeClass("is-active");
 });
-<<<<<<< HEAD
-=======
 
 function modalChore() {
   $("#newChoreIcon").empty();
@@ -246,4 +244,3 @@ function modalAvatar() {
     $("#newAvatar").append(iconCard);
   }
 };
->>>>>>> dd0d91e02ab726f22ab7bd7895f0ac6d9707697b
