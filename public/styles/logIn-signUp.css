@@ -1,0 +1,64 @@
+body {
+  height: 100%;
+  background-color: rgb(63, 72, 204);
+}
+
+#ancestor2 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.title{
+  font-family: "Luckiest Guy", cursive;
+  font-size: 36px;
+  color: rgb(63, 72, 204);
+}
+
+
+#signUpPageTitle{
+  color: white;
+  outline-color: black;
+}
+
+#signUpPageCont{
+  padding: 12px;
+}
+
+#signUpCont{
+  padding-top: 12px;
+}
+
+.input {
+  color: black;
+  border-color: #7A81DD;
+  background-color: white;
+}
+
+#logInBttn,
+#signUpBttn,
+#submitBttn {
+  color: black;
+  border-color: #7A81DD;
+  background-color: #acacac;
+}
+
+#signUpLink {
+  color: black;
+}
+
+#child-box{
+  background-color: white;
+}
+
+ul {
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+footer{
+  padding: 2px;
+  background-color: white;
+  text-align: center;
+  color: rgb(63, 72, 204)
+}
