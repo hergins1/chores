@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
 const bcrypt = require("bcrypt");
+const session = require('express-session')
+
 
 
 const db = require("./models");
@@ -13,6 +15,9 @@ let PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(session({
+  secret: "32lkj3iii4jj4i208as"
+}));
 
 // Handlebars
 app.engine(
@@ -38,8 +43,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,

@@ -42,12 +42,13 @@ module.exports = function(app) {
 
   // USER LOGIN
   app.post("/user/login", function(req, res) {
-    // console.log(req.body);
     db.Users.findOne({
       where: { email: req.body.email }
     }).then(function(dbUsers) {
       // res.json(dbUsers);
       if (dbUsers.password === req.body.password) {
+        req.session.email = req.body.email;
+        req.session.userId = dbUsers.userId;
         console.log("PASSWORD MATCH!");
         if (dbUsers.admin) {
           console.log("ADMIN");
