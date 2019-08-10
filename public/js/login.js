@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#signUpBttn").click(function () {
-    window.location.href = "./views/signup.handlebars";
+    window.location.href = "/signup";
     return false;
   });
 
@@ -16,24 +16,24 @@ $(document).ready(function () {
   //       .val()
   //       .trim()
   //   };
-    // console.log(loginInfo);
+  // console.log(loginInfo);
 
-    // $.ajax({
-    //   type: "POST",
-    //   url: "/user/login",
-    //   data: loginInfo
-    // }).then(function (result) {
-    //   console.log(result);
-    //   if (loginInfo.email && loginInfo.password) {
-    //     console.log("MATCH!");
-    //     // if (admin) {
-    //     //   window.location.href = "./views/indexadmin.handlebars";
-    //     // } else {
-    //     //   window.location.href = "./views/indexuser.handlebars";
-    //     // }
+  // $.ajax({
+  //   type: "POST",
+  //   url: "/user/login",
+  //   data: loginInfo
+  // }).then(function (result) {
+  //   console.log(result);
+  //   if (loginInfo.email && loginInfo.password) {
+  //     console.log("MATCH!");
+  //     // if (admin) {
+  //     //   window.location.href = "./views/indexadmin.handlebars";
+  //     // } else {
+  //     //   window.location.href = "./views/indexuser.handlebars";
+  //     // }
 
-    //     // return false;
-    //   }
-    // });
+  //     // return false;
+  //   }
+  // });
   // });
 });
