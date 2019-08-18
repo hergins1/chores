@@ -28,8 +28,8 @@ $(document).ready(function() {
       type: "POST",
       url: "/api/users/create",
       data: householdInfo
-    }).then(function(result) {
-      console.log(result);
+    }).then(function(res) {
+      // res.redirect('/');
     });
   });
 });
