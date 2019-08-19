@@ -21,8 +21,6 @@ module.exports = function (app) {
     });
   });
 
-
-
   // app.get("/api/user/admin", function(req, res) {
   //   db.Users.findOne({
   //     where: { email: req.body.email }
@@ -56,7 +54,7 @@ module.exports = function (app) {
       db.Users.create(req.body)
         .then(function () {
           // DOES NOT RENDER THE NEXT PAGE
-          // res.render("/indexadmin");
+          // res.render("login");
         })
         .catch(function (err) {
           console.error(err);
@@ -65,8 +63,6 @@ module.exports = function (app) {
       // need to route to the user dashboard
     });
   });
-
-
 
   // UPDATE Users password
   app.put("/api/users/update/:id", function (req, res) {
